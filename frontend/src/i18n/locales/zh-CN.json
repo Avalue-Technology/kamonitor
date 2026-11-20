@@ -1,0 +1,1124 @@
+{
+  "common": {
+    "noData": "暂无数据",
+    "aiDisabled": "AI 功能未连接",
+    "aiDisabledHint": "此版本的 AI 摘要已禁用，请改用 ELI5 简易版",
+    "dataCutoff": "数据统计截至 {date}",
+    "countUnit": "笔",
+    "severityLabel": "严重度 {severity}",
+    "severityLabelWithMax": "严重度 {severity}/{max}",
+    "riskNormal": "正常",
+    "riskAttention": "注意",
+    "riskCritical": "警戒",
+    "riskUnknown": "无数据"
+  },
+  "nav": {
+    "language": {
+      "zhLabel": "繁中",
+      "zhCnLabel": "简中",
+      "enLabel": "EN",
+      "ariaLabel": "切换语言"
+    },
+    "overview": "总览",
+    "about": "说明",
+    "mainNavAriaLabel": "主导览",
+    "searchPlaceholder": "搜索 VIP 客户名称 / 代号 / 国家…"
+  },
+  "signalType": {
+    "growthQualityRisk": {
+      "label": "营收成长伴随品质风险",
+      "description": "营收成长但品质风险升温：同期 RMA/DOA 灯号异常，且表现较前三期更差"
+    },
+    "repeatOrderBreak": {
+      "label": "回购中断",
+      "description": "原本固定回购的重要机种停止下单，间隔已超过其平均回购周期的两倍"
+    },
+    "silentKeyAccount": {
+      "label": "重点客户长期无新案",
+      "description": "营收排名位居前段，但近 180 天未创建任何新商机"
+    },
+    "serviceLoadImbalance": {
+      "label": "售服负担失衡",
+      "description": "每百万美元营收需处理的 AE 客诉案件数，远高于同级客户"
+    },
+    "priceOnlyWins": {
+      "label": "仅凭价格得标",
+      "description": "近两年拿下的案子多数靠价格竞争赢得，毛利结构存在风险"
+    },
+    "specGateLosses": {
+      "label": "规格关卡连败",
+      "description": "近两年输掉的案子多数卡在「规格不符」阶段"
+    },
+    "pipelineDrought": {
+      "label": "未来案源不足",
+      "description": "未来六个月的加权案源低于历史同期营收，或近两季无新商机"
+    },
+    "highEffortDeal": {
+      "label": "重大案件长期未结",
+      "description": "案件金额重大且已投入超过半年未结案，建议列入高层关注清单"
+    },
+    "staleOpenDeal": {
+      "label": "商机久未结案",
+      "description": "商机打开时间已超过天数门槛仍未结案，且不属于「重大案件未结」——建议确认是否持续推进或关闭（数据品质维护）"
+    }
+  },
+  "signalCard": {
+    "severityImpact": "影响度评分：{score}/100",
+    "impactTitle": "依受影响营收金额与超标幅度计算，仅用于排序，不代表问题本身的严重程度",
+    "expand": "为什么？展开依据",
+    "collapse": "收合依据",
+    "loadingEvidence": "正在加载依据…",
+    "loadError": "依据加载失败，请稍后再试。",
+    "noEvidence": "无相关依据数据。",
+    "keyNumbers": "关键数据",
+    "thresholds": "判定门槛",
+    "assumptions": "假设值提醒",
+    "rawDetailsSummary": "技术细节（原始 evidence · 信号类型：{type} · 依 {count} 项事实计算）",
+    "formulaLabel": "计算公式：{formula}"
+  },
+  "odmPipeline": {
+    "mpDateUnset": "量产日未定",
+    "wonBadge": "已 Won · 尚未量产",
+    "expectedMp": "预计量产 {quarter}（{date}）",
+    "monthsToMp": "距量产 {months} 个月",
+    "mpOverdue": "已超过预定量产日",
+    "mpCountdownUnknown": "量产倒数未知",
+    "loading": "正在加载 ODM 项目…",
+    "notFoundMessage": "ODM 项目尚未上线",
+    "notFoundHint": "目前无法取得 ODM 项目数据，待系统连接恢复后将自动显示。",
+    "emptyMessage": "目前无开发中的 ODM 项目",
+    "nreBudgetLine": "NRE 预算 {budget}",
+    "nreSpentSuffix": "已投入 {pct}%",
+    "nrePending": "NRE 投入数据尚未备妥"
+  },
+  "aiNarrativeBlock": {
+    "emptyMessageDefault": "AI 叙述尚未提供",
+    "emptyHintDefault": "此段落尚未生成，您可点击下方「刷新」按钮再次尝试。",
+    "disclaimerDefault": "由 AI 依系统数据自动生成，仅供参考，正式判读请以页面实际数据为准。",
+    "loading": "正在加载 AI 叙述…",
+    "loadErrorMessage": "AI 叙述加载失败",
+    "loadErrorHintFallback": "请稍后再试，或刷新页面。",
+    "modelCodeTitle": "机种代号",
+    "citedValueTitle": "依据事实：{label}",
+    "dataCutoffTitle": "数据统计截止日"
+  },
+  "qualityQuadrant": {
+    "rmaYellowLabel": "RMA 黄灯 {value}%",
+    "rmaRedLabel": "RMA 红灯 {value}%",
+    "doaYellowLabel": "DOA 黄灯 {value}%",
+    "doaRedLabel": "DOA 红灯 {value}%",
+    "tooltipLine": "RMA 率 {rma}% DOA 率 {doa}%",
+    "tooltipShipmentRisk": "出货量 {qty} 灯号 {risk}",
+    "legendItem": "VIP 客户（气泡大小＝出货量，颜色＝品质灯号）",
+    "legendHint": "标签仅显示注意／警戒客户，光标悬停可看完整信息；点击气泡进入客户 360 视角",
+    "thresholdNote": "灰色虚线标示 RMA／DOA 的品质门槛（黄灯／红灯临界点）。",
+    "thresholdTitle": "门槛取自「{name}」目前生效的设置；多数客户未覆写默认值，此门槛适用于多数客户。"
+  },
+  "portfolioYoyTrend": {
+    "streakLabel": "连续衰退月数",
+    "monthsUnit": "个月",
+    "methodHint": "计算口径说明 ⓘ",
+    "methodHintTitle": "3MMA（3-Month Moving Aggregate）即滚动 3 个月营收合计，对比去年同期之 3 个月。采用 3MMA 是为了平滑淡旺季与单月大单的杂讯，比单月 YoY 更早反映趋势方向。口径：erp_sales_order 订单日期、8 家 VIP 合计。连续衰退月数指从最新月份回溯，YoY 连续为负的月数，若转正或无去年同期数据则中断。",
+    "chartCaption": "月度 YoY 走势（3MMA，单位：%）",
+    "tooltipMonth": "{month}（滚动 3 个月）",
+    "tooltipCurrent": "本期 ${value}M",
+    "tooltipPrev": "去年同期 ${value}M",
+    "tooltipYoy": "YoY {value}",
+    "noPriorYear": "无去年同期数据",
+    "yAxisName": "YoY %"
+  },
+  "regenerateButton": {
+    "labelDefault": "重新生成",
+    "labelNotWired": "重新生成（尚未开放）",
+    "labelRunning": "生成中… {elapsed}s",
+    "labelDone": "已重新生成（{elapsed}s）",
+    "labelError": "生成失败，请再试一次",
+    "titleNotWired": "此功能尚未开放，开放后按钮将自动激活。",
+    "titleDefault": "重新生成这段叙述"
+  },
+  "factCitationList": {
+    "summaryWithCited": "摘要依据 {total} 项事实，实际引用 {cited} 项",
+    "summaryTotalOnly": "摘要依据 {total} 项事实",
+    "collapsedToggle": "依据 {total} 项事实",
+    "citedSectionTitle": "已引用",
+    "uncitedSummary": "未直接引用（共 {count} 项，本段未提及，但仍为判定依据之一）",
+    "disclaimerZeroFacts": "本段未登记任何事实（零信号对照客户之常见情形，非数据缺失）。",
+    "disclaimerAuthoritative": "分类与引用判定皆为系统记录的原始数据，非前端额外推算。",
+    "disclaimerNoCitationData": "系统未提供本段引用清单，故无法标示实际引用项目——宁缺毋滥，不作臆测。",
+    "emptyMessage": "本段未登记任何依据事实。"
+  },
+  "aiFacts": {
+    "domain": {
+      "sales": "销售",
+      "quality": "品质",
+      "opportunity": "商机",
+      "service": "售后",
+      "odm": "ODM",
+      "signal": "信号",
+      "portfolio": "组合",
+      "other": "其他"
+    },
+    "domainUnclassified": "未分类（{domain}）",
+    "domainUnclassifiedNone": "无"
+  },
+  "assistantFace": {
+    "phaseIdle": "AI 助理待命中",
+    "phaseReasoning": "AI 助理思考中",
+    "phaseTooling": "AI 助理正在查找数据",
+    "phaseSpeaking": "AI 助理回复中",
+    "phaseError": "AI 助理发生错误",
+    "phaseSleepy": "AI 助理闲置中，即将进入休眠",
+    "phaseAsleep": "AI 助理休眠中",
+    "labelWithContext": "{phase}，Token 用量 {percent}%"
+  },
+  "generationStamp": {
+    "aiTag": "AI 生成",
+    "localGenerated": "本地生成",
+    "elapsed": "耗时 {value}",
+    "factCount": "依据 {count} 项事实",
+    "collapse": "收合",
+    "expand": "展开",
+    "todayTime": "今日 {time}"
+  },
+  "aeCaseTrend": {
+    "loading": "正在加载 AE 客诉案件数据…",
+    "notFoundMessage": "AE 客诉数据尚未提供",
+    "notFoundHint": "此功能尚未开放，数据备妥后将自动显示逐月分类堆栈长条图。",
+    "emptyMessage": "近期无 AE 客诉案件数据"
+  },
+  "dataStamp": {
+    "cutoffLoading": "正在加载数据截止日…",
+    "periodLabel": "报表期别 {period}"
+  },
+  "trendSparkline": {
+    "ariaLabel": "趋势图",
+    "pointTitle": "{period}：{value}"
+  },
+  "riskDot": {
+    "titleWithDetail": "{label}｜{detail}"
+  },
+  "period": {
+    "ttmWithRange": "近 12 个月（{range}）",
+    "ttmDefault": "近 12 个月"
+  },
+  "api": {
+    "networkError": "网络连接错误：{path}",
+    "responseError": "{path} 回应状态码 {status}"
+  },
+  "overview": {
+    "title": "VIP 客户总览",
+    "bandA": {
+      "heading": "今日焦点",
+      "signalCountOnly": "本期共 {count} 则跨域信号",
+      "signalCountWithSeverity": "本期共 {count} 则跨域信号，最高严重度 {severity}",
+      "signalCountWithSeverityMax": "本期共 {count} 则跨域信号，最高严重度 {severity}/{max}",
+      "aiGenerated": "✦ AI 生成",
+      "aiScope": "跨全公司 VIP 客户・本地生成"
+    },
+    "bandB": {
+      "heading": "公司整体 YoY 趋势",
+      "sub": "八家 VIP 合计 · 滚动三个月 YoY（3MMA）",
+      "loading": "正在加载公司整体趋势…",
+      "loadError": "组合数据加载失败",
+      "loadErrorHint": "请稍后再试，或刷新页面。",
+      "ttmSuffix": "（共 {count} 家 VIP 合计）",
+      "yoyLabel": "营收 YoY（去年同期 {prev}）",
+      "pipelineLabel": "预期商机金额（已创建商机、尚未转为订单）",
+      "chartLoadError": "公司整体 YoY 趋势暂时无法加载",
+      "chartLoadErrorHint": "请稍后再试，或刷新页面。",
+      "leadPanelTitle": "先行警讯 · 比营收提早半年反应，非单纯预测",
+      "leadLoading": "正在加载先行警讯…",
+      "leadEmpty": "本期未侦测到先行警讯",
+      "coverageTitle": "未来半年案源偏低",
+      "coverageBody": "现有案源金额 {pipeline}，去年同期实际营收 {baseline}",
+      "coverageMetaTitle": "未来 6 个月预期成案金额 ÷ 去年同期 6 个月营收。分子依商机阶段成案概率加权（可行性评估 20% / 提案 40% / 打样 60% / 结案 90%，皆为假设值）。3x 为业界经验值；本业态营收多来自既有机种回购，回购不需开新商机，故覆盖倍数低于 1x 属结构性常态，非警讯。",
+      "coverageMetaText": "{ratio}x · 本业态以回购订单为主，普遍低于 1x（同业参考值 3x）",
+      "coverageAssumptionSuffix": " · 含假设值",
+      "declineTitle": "连续 {streak} 个月营收低于去年同期",
+      "declineBody": "最近三个月营收 {recent}，去年同期 {prev}（{yoy}）",
+      "declineMetaTitle": "三个月移动合计营收之 YoY 连续为负的月数（从最新月份回溯）；与上方公司整体趋势采用相同算法，此处挑选八家中表现最久的一家",
+      "declineAsOf": "截至 {month}",
+      "compactEmpty": "目前无其他待复核的跨域信号",
+      "compactMore": "另有 {count} 则较低严重度信号",
+      "footnote": "共 {count} 家次触发"
+    },
+    "bandC": {
+      "heading": "品质风险象限图",
+      "tag": "品质视角",
+      "tagTitle": "此图仅呈现品质面（RMA × DOA × 出货量），不含营收、YoY 等销售指针，无法代表客户整体健康度",
+      "sub": "仅查看 RMA／DOA／出货量，不含销售面 · X 轴：RMA 率 Y 轴：DOA 率 气泡大小：出货量（期别 {period}）",
+      "loading": "正在加载象限图…",
+      "empty": "本期无可绘制象限图的客户数据",
+      "aeTitle": "AE 案件密度",
+      "aeSub": "每百万美元营收之售后案件数 · {ttm} · 共 {count} 家 VIP",
+      "aeLoading": "正在加载 AE 案件密度…",
+      "aeEmpty": "尚无 AE 案件密度数据",
+      "aeMedianLabel": "中位数 {value}",
+      "aeDotTitle": "{name}：{density} 笔/百万美元",
+      "aeNoteAllNormal": "所有 {count} 家 VIP 皆落在中位数 {median} 笔/百万美元附近，目前无异常密度客户",
+      "aeNoteRiskyDetailItem": "{name} 为中位数的 {multiple} 倍（{ticketCount} 笔 ÷ 营收 {revenue}）",
+      "aeNoteWithRisky": "多数客户集中于中位数附近；{detail}",
+      "aeNoteJoinSeparator": "；"
+    },
+    "bandD": {
+      "heading": "ODM 项目",
+      "sub": "今年立案 ODM 项目 → 预计量产季"
+    },
+    "bandE": {
+      "heading": "VIP 客户清单（{count}）",
+      "subExpanded": "点击客户名称可查看完整经营数据与风险指针",
+      "subCollapsed": "目前有 {count} 家带有信号 · 点击展开",
+      "filterCustomerModelAll": "客户模块：全部",
+      "filterIndustryAll": "产业：全部",
+      "filterCountryAll": "国家：全部",
+      "sortNote": "预设依信号严重度由高至低排序",
+      "loading": "正在加载客户清单…",
+      "loadError": "客户清单加载失败",
+      "columnName": "客户名称",
+      "columnTtmRevenue": "TTM 营收",
+      "columnYoy": "营收 YoY",
+      "columnSegment": "客户模块／产业",
+      "columnSignals": "信号",
+      "modelAlertCount": "共 {count} 个机种亮灯",
+      "signalTypeSeparator": "、"
+    }
+  },
+  "customer": {
+    "loading": "正在加载客户数据…",
+    "notFound": "找不到此客户",
+    "notFoundHint": "客户 ID 可能已变更，请返回总览重新点击。",
+    "loadError": "客户数据加载失败",
+    "loadErrorHint": "请稍后再试，或刷新页面。",
+    "header": {
+      "cooperationYears": "合作 {years} 年",
+      "cooperationUnknown": "合作年资未知",
+      "salesOwnerLabel": "业务负责人：",
+      "unitParen": "（{unit}）",
+      "vipReasonLabel": " · VIP 理由：",
+      "statTtmRevenue": "TTM 营收",
+      "statYoyLabel": "YoY（去年同期 {prev}）",
+      "statWonRateLabel": "赢率（近两年，{won}/{closed}）",
+      "newOppLabel": "近半年添加商机",
+      "newOppPrevSuffix": "（前半年 {prev} 笔）",
+      "noteExpand": "展开背景介绍（LLM 生成）",
+      "noteCollapse": "收合背景介绍"
+    },
+    "crossDomain": {
+      "heading": "AI 跨域经营摘要",
+      "emptyMessage": "AI 跨域经营摘要尚未生成",
+      "emptyHint": "此客户目前尚无已生成的跨域摘要。"
+    },
+    "signals": {
+      "heading": "该客户之信号清单",
+      "loading": "正在加载信号…",
+      "loadError": "信号加载失败",
+      "loadErrorHint": "请稍后再试，或刷新页面。",
+      "noSignalTitle": "经系统全面盘点，该客户各项指针皆正常，未触发任何风险告警。",
+      "noSignalText": "无异常信号",
+      "moreSignals": "另有 {count} 则较低优先序信号",
+      "qualityAlertTitle": "品质指针亮灯",
+      "qualityAlertChipTitle": "点击查看品质页签",
+      "modelAlertChipTitle": "点击查看品质页签之机种灯号表",
+      "modelChipLabel": "机种 {model} · {label}",
+      "riskWordYellow": "黄灯",
+      "riskWordRed": "红灯",
+      "remainingModelAlerts": "另有 {count} 个机种指针亮灯"
+    },
+    "regenerate": {
+      "genericFailure": "刷新失败"
+    },
+    "tabs": {
+      "sales": "销售",
+      "quality": "品质",
+      "salesRiskDetail": "部分商机停滞超过合理等待范围，请见销售页签「商机健康度」"
+    },
+    "sales": {
+      "summaryEmptyMessage": "AI 销售摘要尚未生成",
+      "summaryEmptyHint": "此功能将于后续版本提供。",
+      "closedDealsEmpty": "近 2 年无足够之已结案商机数据"
+    },
+    "dealHealth": {
+      "heading": "商机健康度",
+      "pipelineLabel": "案源与金额",
+      "countAmount": "{count} 笔 · {amount}",
+      "amountFillGapTitle": "有 {count} 笔商机未填写金额，上方总金额可能被低估",
+      "amountFillGapTag": "仅 {filled}/{total} 笔填写金额",
+      "majorProjectsLabel": "重大项目概况",
+      "majorProjectsCount": "{count} 笔・{amount}",
+      "noMajorProjects": "无进行中的重大项目",
+      "majorProjectSubject": "{label}（{status}・{cycle}）",
+      "staleNoUpdate": "尚无进度纪录（门槛 {days} 天）",
+      "staleUpdated": "久未更新 · {days} 天（门槛 {threshold} 天）",
+      "ongoingLabel": "进行中概况",
+      "advancingLabel": "推进中",
+      "dealCountAmount": "{count} 笔 {amount}",
+      "longRunningLabel": "长销售周期",
+      "noLongRunning": "无长销售周期案件",
+      "daysOpen": "{days} 天",
+      "moreItems": "另有 {count} 笔",
+      "unclassifiedLabel": "未分类"
+    },
+    "usage": {
+      "heading": "应用领域（Usage）分析",
+      "sub": "依商机应用领域分类拆解；Unknown 代表未填写应用领域之订单／商机，非特定业务用途",
+      "unknownLabel": "{usage}（未分类）",
+      "revenueTitle": "近 12 个月营收（按应用领域，金额口径）",
+      "revenueSub": "近 12 个月订单口径 · YoY 对比去年同期",
+      "unknownSharePctTag": "未知占 {pct}%",
+      "revenueEmpty": "近 12 个月无足够订单数据可供拆解应用领域",
+      "wonRateTitle": "各应用领域赢率（件数口径）",
+      "wonRateSub": "近 2 年已结案商机；X 轴固定 0~100%，便于跨领域比较赢率",
+      "wonRateCountTag": "括号内为已结案件数",
+      "wonRateNoClosed": "近 2 年无已结案商机",
+      "wonRateFraction": "赢率 {pct}（{won}/{closed}）",
+      "noDataShort": "无数据"
+    },
+    "gate": {
+      "heading": "赢因 vs 败因对照",
+      "sub": "维度依业务洽谈顺序：规格 → 交期 → 价格，输在越前面的关卡问题越严重"
+    },
+    "odm": {
+      "heading": "ODM 项目",
+      "wonTag": "已 Won",
+      "expectedMp": "预计量产：{date}",
+      "monthsToMp": "（{months} 个月后）",
+      "nreBudget": "NRE 预算 {amount}",
+      "nreSpent": "· 已投入 {pct}%",
+      "inProductionTag": "量产中",
+      "roiMultiple": "累计营收 ÷ NRE = {multiple}x",
+      "paybackTitle": "回收期系依假设毛利率折算，非实际真实毛利率",
+      "payback": "回收期 {months} 个月（{status}） · 假设毛利率 {pct}%",
+      "recovered": "已回本",
+      "notRecovered": "尚未回本",
+      "paybackUnavailable": "回收期尚无法估算（NRE 数据未备妥）",
+      "nreUnavailable": "NRE 数据尚未备妥，无法计算 ROI 倍数",
+      "notFound": "ODM 项目数据尚未上线",
+      "notFoundHint": "目前无法取得 ODM 项目数据，数据备妥后将自动显示。"
+    },
+    "revenue": {
+      "trendTitleMonthly": "营收趋势（近 18 个月，3 个月移动合计）",
+      "trendTitleQuarterly": "营收趋势（近 12 季，依机种堆栈）",
+      "trendEmpty": "尚无足够订单数据以绘制营收趋势",
+      "modelRankTitle": "机种营收排行（近 12 个月，[ODM] 为开发项目机种）",
+      "modelRankEmpty": "尚无机种营收数据",
+      "chartYAxisName": "3 个月移动合计营收 (USD)",
+      "series3mLabel": "近 3 个月合计"
+    },
+    "projects": {
+      "heading": "各项目明细",
+      "colModel": "机种",
+      "colTtmRevenue": "近 12 个月营收",
+      "colYoy": "机种营收 YoY",
+      "colSharePct": "占比",
+      "colLastShip": "最后出货日"
+    },
+    "quality": {
+      "tabRiskBothLabel": "客户整体品质指针亮灯，另有 {count} 个机种亮黄／红灯，请见品质页签",
+      "tabRiskAggregateOnly": "客户整体品质指针亮黄／红灯，请见品质页签",
+      "tabRiskModelOnly": "客户整体五项指针全绿，但有 {count} 个机种亮黄／红灯（汇总会稀释个别机种异常），请见品质页签之机种灯号表",
+      "summaryEmptyMessage": "AI 品质摘要尚未生成",
+      "summaryEmptyHint": "此功能将于后续版本提供。",
+      "topRiskTitleHint": "排序逻辑：五项指针灯号加权（红灯 2 分／黄灯 1 分／绿灯 0 分）加总后取前 3 名，与 AI 摘要「需要注意的机种」采用同一套规则，全站定义一致。",
+      "topRiskWordTitle": "此机种五项指针中最差的灯号：{word}",
+      "topRiskAllGreen": "本期所有机种各项指针皆为绿灯，无需要特别关注的机种",
+      "topRiskNoData": "尚无机种品质数据",
+      "noReport": "此客户尚无 QA 报表",
+      "thresholdDetail": "黄 {yellow} / 红 {red}",
+      "trendHeading": "品质指针趋势",
+      "trendPeriodTitle": "期别代表滚动窗口之最后一个月（例如 202607 代表 2025/08–2026/07 这 12 个月窗口之加总/平均结果，非单月数字，定义与上方 KPI 卡一致）。",
+      "trendPeriodSub": "近 6 期 · 五个指针量纲不同，各自独立 Y 轴",
+      "trendThreshold": "目标值：{value}",
+      "trendCountValue": "{count} 笔",
+      "trendChartEmpty": "尚无足够期数以绘制趋势",
+      "colModel": "机种",
+      "colShipmentQty": "出货量",
+      "colComplaints": "客诉数"
+    },
+    "afterSales": {
+      "heading": "售后服务",
+      "sub": "近 6 个月 · AE 案件",
+      "chartTitle": "AE 案件月度趋势与分类",
+      "chartSub": "依月份堆栈，色块代表案件分类"
+    }
+  },
+  "evidence": {
+    "label": {
+      "doa": "DOA 指针",
+      "rma": "RMA 指针",
+      "cur_rate": "本期数值",
+      "compare_rate": "对照期数值",
+      "cur_risk": "本期灯号",
+      "yellow_threshold": "黄灯门槛",
+      "red_threshold": "红灯门槛",
+      "triggered": "是否触发",
+      "yoy_pct": "营收 YoY",
+      "yoy_ratio": "YoY 倍数（相对 10% 基准）",
+      "yoy_trigger_pct": "YoY 触发门槛",
+      "impact_score": "影响度分数",
+      "impact": "影响度计算细节",
+      "latest_period": "最新期别",
+      "compare_period": "对照期别",
+      "erp_customer_id": "客户代号",
+      "ttm_revenue_usd": "近 12 个月营收",
+      "prev_revenue_usd": "去年同期营收",
+      "affected_revenue_usd": "牵动营收",
+      "portfolio_ttm_revenue_usd": "VIP 组合近 12 个月营收",
+      "revenue_weight_pct": "营收权重",
+      "worst_metric_ratio": "最差指针比值",
+      "severity_multiplier": "严重度倍数",
+      "lookback_periods": "回溯期数",
+      "latest_report_id": "最新报表 ID",
+      "compare_report_id": "对照报表 ID",
+      "model": "机种",
+      "gap_days": "距上次下单天数",
+      "rma_count": "RMA 笔数",
+      "cfqr_count": "客诉笔数",
+      "order_count": "历史订单次数",
+      "avg_cycle_days": "平均回购周期（天）",
+      "last_order_date": "最后下单日",
+      "revenue_rank_3yr": "近三年营收排名",
+      "revenue_share_pct_3yr": "近三年营收占比",
+      "revenue_share_pct": "近三年营收占比",
+      "multiple_of_avg_cycle": "超过平均周期倍数",
+      "multiple": "超过平均周期倍数",
+      "gap_trigger_multiple": "触发倍数门槛",
+      "model_revenue_3yr_usd": "机种近三年营收",
+      "model_revenue_annualized_usd": "机种年化营收",
+      "min_gap_days": "最小天数门槛",
+      "min_order_points": "最少历史订单次数",
+      "min_revenue_share_pct": "最小营收占比门槛",
+      "recent_order_dates": "近期下单日",
+      "other_candidates": "同客户其他候选商机",
+      "days_since_last_new_opportunity": "距上次新商机天数",
+      "days_trigger_threshold": "天数触发门槛",
+      "revenue_rank_among_vip": "VIP 客户中营收排名",
+      "reference_date": "基准日",
+      "since": "统计起始日",
+      "won_total": "Won 商机数",
+      "price_only_wins": "纯靠低价赢单数",
+      "price_only_wins_pct": "纯靠低价赢单占比",
+      "pct_trigger_threshold": "占比触发门槛",
+      "opportunity_ids": "相关商机 ID",
+      "spec_gate_losses": "规格关卡输单数",
+      "spec_gate_losses_pct": "规格关卡输单占比",
+      "lost_stopped_total": "Lost/Stopped 商机总数",
+      "rank": "排名",
+      "coverage_multiple": "案源覆盖倍数",
+      "stage_probability_is_assumption": "阶段成案概率为假设值",
+      "healthy_multiple_is_assumption": "案源健康倍数为假设值",
+      "recent_quarter": "最近一个完整季度",
+      "recent_new_opportunity_count": "最近一季新商机笔数",
+      "recent_new_opportunity_amount_usd": "最近一季新商机金额",
+      "baseline_quarters": "比较基准季别（前 3 季）",
+      "baseline_avg_count_per_quarter": "自身前 3 季平均每季新商机笔数",
+      "baseline_total_count": "前 3 季新商机总笔数",
+      "baseline_avg_amount_usd_per_quarter": "自身前 3 季平均每季新商机金额",
+      "own_history_density_ratio": "最近一季案源密度（相对自身历史）",
+      "own_history_trigger_ratio": "自身历史密度触发门槛",
+      "peer_median_density_ratio": "8 家 VIP 同期比值中位数",
+      "peer_median_trigger_fraction": "中位数触发比例",
+      "peer_trigger_value": "同侪门槛值（中位数 × 比例）",
+      "peer_sample_size": "有效同侪样本数",
+      "all_vip_own_history_density_ratios": "各 VIP 客户案源密度比值（相对自身历史）",
+      "reference": "参考数值",
+      "weighted_pipeline_6m_usd": "未来 6 个月加权案源金额",
+      "coverage_baseline_revenue_usd": "覆盖倍数比较基准营收（去年同期）",
+      "coverage_healthy_multiple_assumed": "案源覆盖同业参考值",
+      "opportunity_id": "商机编号",
+      "product": "产品",
+      "subject": "商机主旨",
+      "display_label": "商机",
+      "sales_cycle": "销售周期类型",
+      "sales_cycle_phase": "销售阶段",
+      "start_date": "商机起始日",
+      "days_open": "进行天数",
+      "same_type_avg_cycle_days": "同类型平均销售周期（天）",
+      "same_type_sample_count": "同类型样本数",
+      "multiple_of_same_type_avg": "超过同类型平均倍数",
+      "amount_usd": "商机金额",
+      "amount_is_approximate": "金额为估计值",
+      "significant_amount_threshold_usd": "显著金额门槛",
+      "min_days_open_threshold": "最少进行天数门槛",
+      "max_age_days_threshold": "天数上限门槛（一般案件）",
+      "max_age_days_threshold_large": "天数上限门槛（大额案件）",
+      "large_amount_multiple": "大额倍数门槛",
+      "stale_count": "已超过门槛的商机数",
+      "oldest_days_open": "最旧一笔进行天数",
+      "oldest_opportunity_id": "最旧一笔商机编号",
+      "oldest_display_label": "最旧一笔商机",
+      "applicable_max_age_days": "该笔适用之天数上限",
+      "items": "个别商机清单",
+      "category": "信号分类",
+      "threshold": "触发门槛",
+      "ratio_ticket_per_musd": "每百万营收 AE 案件数",
+      "vip_median_ratio": "VIP 中位数（笔/百万美元）",
+      "ticket_count_ttm": "近 12 个月 AE 案件数",
+      "all_vip_ratios": "各 VIP 客户每百万营收 AE 案件数",
+      "trigger_threshold": "触发门槛",
+      "thresholds": "触发门槛组"
+    },
+    "layout": {
+      "growthQualityRisk": {
+        "rmaCurRate": "RMA 率（本期）",
+        "doaCurRate": "DOA 率（本期）",
+        "yoyTriggerThreshold": "YoY 触发门槛",
+        "rmaYellowThreshold": "RMA 黄灯门槛",
+        "doaYellowThreshold": "DOA 黄灯门槛"
+      },
+      "repeatOrderBreak": {
+        "modelRevenueSharePct3yr": "该机种近三年营收占比",
+        "gapDays": "距上次下单天数",
+        "avgCycleDays": "自身平均回购周期",
+        "multipleOfAvgCycle": "超过平均周期倍数",
+        "minRevenueSharePctThreshold": "最小营收占比门槛",
+        "minOrderPointsThreshold": "最少历史订单次数",
+        "minGapDaysThreshold": "最小天数门槛",
+        "gapTriggerMultipleThreshold": "周期倍数触发门槛"
+      },
+      "serviceLoadImbalance": {
+        "ratioTicketPerMusd": "每百万营收 AE 案件数",
+        "vipMedianRatio": "VIP 中位数",
+        "ticketCountTtm": "近 12 个月 AE 案件数",
+        "triggerThreshold": "触发门槛"
+      },
+      "silentKeyAccount": {
+        "revenueRankAmongVip": "VIP 客户中营收排名",
+        "daysSinceLastNewOpportunity": "距上次新商机天数",
+        "silentDaysTriggerThreshold": "沉寂天数触发门槛"
+      },
+      "priceOnlyWins": {
+        "wonTotal": "近 2 年 Won 商机数",
+        "priceOnlyWinsCount": "纯靠低价赢单数",
+        "priceOnlyWinsPctThreshold": "低价赢单占比触发门槛"
+      },
+      "specGateLosses": {
+        "lostStoppedTotal": "近 2 年 Lost/Stopped 商机数",
+        "specGateLossesCount": "规格关卡输单数",
+        "specGateLossesPctThreshold": "规格关卡输单占比触发门槛"
+      },
+      "highEffortDeal": {
+        "amountUsd": "商机金额",
+        "daysOpen": "进行天数",
+        "sameTypeAvgCycleDays": "同类型平均销售周期（参考，非触发条件）",
+        "multipleOfSameTypeAvg": "超过同类型平均倍数（参考，非触发条件）",
+        "significantAmountThreshold": "显著金额门槛",
+        "minDaysOpenThreshold": "最少进行天数门槛"
+      },
+      "staleOpenDeal": {
+        "staleCount": "已超过门槛的商机数",
+        "oldestDaysOpen": "最旧一笔进行天数",
+        "oldestDisplayLabel": "最旧一笔商机",
+        "maxAgeDaysThresholdStandard": "天数门槛（一般案件）",
+        "maxAgeDaysThresholdLarge": "天数门槛（大额案件）"
+      }
+    },
+    "unit": {
+      "deals": "{n} 笔",
+      "tickets": "{n} 笔",
+      "ticketsPerMusd": "{n} 笔/百万美元",
+      "times": "{n} 次",
+      "days": "{n} 天",
+      "rank": "第 {n} 名",
+      "approxUsd": "≈{amount}"
+    },
+    "value": {
+      "yes": "是",
+      "no": "否",
+      "empty": "（无）",
+      "countItems": "{n} 笔"
+    },
+    "section": {
+      "facts": "事实"
+    },
+    "assumption": {
+      "stageProbability": "各商机阶段之成案概率（Feasibility 20% / Proposal 40% / Sampling 60% / Close 90%）为用户设置之假设值，非由历史赢率计算而得。",
+      "healthyMultiple": "「案源覆盖 3x」为业界经验值，非由这批数据计算而得；本业态营收多来自既有机种回购订单，回购不需开新商机，故覆盖倍数低于 1x 属结构性常态。",
+      "significantAmountPercentile": "「显著金额」门槛取全公司未结案商机金额（有填写金额者）之第 75 百分位数（P75），此 75% 为本次改版之判定标准，非经统计显著性计算。",
+      "timeConfidence": "「未来 6 个月加权案源」所采用之逐月时间信心权重（第 1 个月 95%…第 6 个月 40%，越近月份权重越高）为经验假设值，非由历史准确率统计而得。",
+      "fallbackWithLabel": "{label}为假设值，非系统计算之事实。",
+      "fallbackGeneric": "此数值为假设值，非系统计算之事实。"
+    }
+  },
+  "eli5": {
+    "overview": {
+      "loading": "加载中…",
+      "notFoundMessage": "总览数据尚未上线",
+      "notFoundHint": "后端 /eli5/qa/overview 尚未提供，请稍后再回来查看。",
+      "errorMessage": "读取失败",
+      "redCount": "共 {count} 家红灯",
+      "byCustomerEyebrow": "各客户",
+      "qaCardsTitle": "品质卡",
+      "qaCardsNote": "箭头代表对比上期；点击卡片进入客户页",
+      "growthEyebrow": "营收规模 × 成长快慢",
+      "growthTitle": "成长矩阵",
+      "growthCompanyYoy": "全公司成长 {pct}%",
+      "tabsLabel": "品质图表查看",
+      "tabQuadrant": "象限图",
+      "tabMatrix": "型号矩阵",
+      "tabRanking": "风险排名",
+      "modelMatrix": {
+        "thCustomer": "客户",
+        "noShared": "这一期没有被两家以上客户共用的型号",
+        "legendZero": "0 件",
+        "legendGreen": "绿",
+        "legendYellow": "黄",
+        "legendRed": "红",
+        "legendFew": "量太少",
+        "legendNone": "未购买",
+        "note": "栏为共用型号，格内为 RMA 率；点格子进入客户页",
+        "tipShip": "出货 {qty}",
+        "tipRma": "RMA {pct}（{count} 件）",
+        "tipFew": "出货量低于 {min}，RMA 率仅供参考",
+        "tipNoRma": "尚无 RMA 数据"
+      },
+      "riskRanking": {
+        "filterLabel": "客户",
+        "filterAll": "全部（{n} 家）",
+        "legendNote": "轴固定 {axis}，单项上限 {cap}",
+        "groupPost": "出货后",
+        "groupFactory": "厂内",
+        "empty": "这一期没有任何指针超出门槛",
+        "emptyCustomer": "这个客户这一期没有任何指针超出门槛",
+        "fewTitle": "量太少，仅供参考",
+        "fewNote": "含样本量不足的指针，分数仅供参考",
+        "showAll": "显示全部 {n} 笔",
+        "showTop": "只显示前 {n} 名",
+        "odm": "ODM",
+        "tipSeg": "{key} {score}"
+      },
+      "qualityHead": {
+        "quadrant": {
+          "eyebrow": "RMA × DOA",
+          "title": "品质风险分布"
+        },
+        "matrix": {
+          "eyebrow": "共用型号 × 客户",
+          "title": "型号矩阵",
+          "note": "格内为 RMA 率"
+        },
+        "ranking": {
+          "eyebrow": "五项指针超标程度",
+          "title": "风险排名"
+        }
+      }
+    },
+    "chartReading": {
+      "label": "AI 解读"
+    },
+    "hero": {
+      "title": "VIP 客户总览",
+      "pill": "DEMO DATA",
+      "meta": "数据期别 {period} · 各客户最新一期 · 共 {count} 家 VIP 客户",
+      "aiEyebrow": "AI 重点",
+      "loading": "读取中…",
+      "errorMessage": "读取失败",
+      "emptyMessage": "AI 摘要尚未产生",
+      "emptyHint": "之后这里将以简短文字说明本期需注意之客户",
+      "customerEmptyMessage": "这位客户尚未有 AI 摘要",
+      "regenErrorDefault": "生成失败，请再试一次",
+      "langMenuLabel": "摘要语言",
+      "prevSlide": "上一则",
+      "nextSlide": "下一则",
+      "qualityLabel": "品质",
+      "salesLabel": "销售"
+    },
+    "aiCard": {
+      "ariaLabel": "AI 摘要",
+      "eyebrowDefault": "AI 重点",
+      "loading": "读取中…",
+      "errorMessage": "读取失败",
+      "emptyMessageDefault": "AI 摘要尚未产生",
+      "emptyHintDefault": "之后这里将总结本页内核重点",
+      "regenErrorDefault": "生成失败，请再试一次",
+      "langMenuLabel": "摘要语言",
+      "langNameEn": "英文",
+      "langNameZhTW": "中文",
+      "summaryLangFallbackNote": "{requested}版尚未产生，显示{actual}版"
+    },
+    "clueDialog": {
+      "closeLabel": "关闭",
+      "dialogLabel": "线索问答",
+      "placeholder": "请选择一个问题",
+      "answerEyebrow": "AI 回答",
+      "loading": "读取中…",
+      "notFoundMessage": "尚未产生",
+      "notFoundHint": "请点击下方按钮以产生此题答案",
+      "errorMessage": "读取失败",
+      "regenErrorDefault": "生成失败，请再试一次"
+    },
+    "gapCard": {
+      "evidenceLink": "看逐笔数据 →",
+      "stepQuestion": {
+        "pipeline_vs_orders": "未来是否有案源进驻",
+        "won_vs_lost": "进驻的案源赢得多少",
+        "orders_vs_revenue": "赢得的订单结构为何",
+        "orders_vs_shipments": "能否顺利出货",
+        "orders_vs_ontime": "交货是否准时"
+      },
+      "clueButtonTitle": "这对此客户代表什么？",
+      "clueButtonAriaLabel": "询问 AI 关于此卡片",
+      "actionLabel": "建议确认",
+      "aiNoteLabel": "AI 说明",
+      "aiNoteEmpty": "尚未产生",
+      "emptyData": "数据不足",
+      "axisOntime": "准交率 →",
+      "axisOrders": "订单数",
+      "bridge": {
+        "base": "去年同期",
+        "orders": "订单笔数",
+        "aov": "每张单平均金额",
+        "revenue": "今年营收"
+      }
+    },
+    "qaTab": {
+      "loading": "加载中…",
+      "notFoundMessage": "品质视角数据尚未上线",
+      "notFoundHint": "后端 /eli5/qa/customers/{id} 尚未提供，请稍后再回来查看。",
+      "errorMessage": "读取失败",
+      "periodNote": "数据期别 {period} · 指针采近 12 个月滚动，走势观察近 6 个月",
+      "kpiEyebrow": "品质指针",
+      "kpiTitle": "五项指针与目标对照",
+      "kpiNote": "红色虚线＝目标；数据点颜色＝当月灯号",
+      "top3Eyebrow": "优先关注",
+      "top3Title": "风险最高之 3 个机种",
+      "top3Note": "红灯 2 分、黄灯 1 分，五项加总计算",
+      "top3Empty": "本期无亮灯机种",
+      "shipmentQty": "出货 {count} 台",
+      "scoreLabel": "风险分数",
+      "detailEyebrow": "明细",
+      "detailTitle": "全部机种",
+      "detailNote": "共 {count} 个机种 · 出货 {qty} 台",
+      "colModel": "机种",
+      "colShipmentQty": "出货量",
+      "colDoa": "DOA",
+      "colRma": "RMA",
+      "colCfqr": "CFQR",
+      "colFpy": "FPY",
+      "colRepairRate": "维修率",
+      "emptyModelsRow": "本期无机种数据"
+    },
+    "salesTab": {
+      "loading": "加载中…",
+      "notFoundMessage": "ELI5 数据尚未上线",
+      "notFoundHint": "后端 /customers/{id}/eli5 尚未提供，请稍后再回来查看。",
+      "errorMessage": "读取失败",
+      "metaLine": "{type} · ODM 占营收 {pct}% · 近 12 个月 {start} – {end}",
+      "scorecardEyebrow": "年度成绩单",
+      "scorecardNote": "目标为公司年初制定；此处仅呈现结果，不作原因臆测",
+      "scorecardEvidenceLink": "看逐笔数据 →",
+      "chainsEyebrow": "可视线索",
+      "chainsTitle": "五条线索（按因果顺序）",
+      "chainsNote": ""
+    },
+    "customerPage": {
+      "tabQuality": "品质",
+      "tabSales": "销售",
+      "noteToggle": "背景介绍"
+    },
+    "qaBubble": {
+      "empty": "尚无足够数据绘制气泡图",
+      "legendRisk": "警戒",
+      "legendAttention": "注意",
+      "legendNormal": "正常",
+      "legendNote": "RMA／DOA 为近 12 个月滚动 · 灯号取 RMA 与 DOA 中较差者 · 气泡越大代表出货量越多 · 光标移至气泡可查看客户名称",
+      "axisRma": "RMA 率 (%)",
+      "axisDoa": "DOA 率 (%)",
+      "tooltipShipment": "出货量",
+      "tooltipUnit": "台"
+    },
+    "kpiTile": {
+      "risk": {
+        "R": "超标",
+        "Y": "注意",
+        "G": "达标"
+      },
+      "flatDelta": "持平",
+      "unitPiece": "笔",
+      "target": "目标",
+      "deltaSub": "较上月"
+    },
+    "evidence": {
+      "back": "← 回到 {name} 销售",
+      "loading": "加载中…",
+      "notFound": "找不到这张卡片的数据。",
+      "errorMessage": "读取失败：{message}",
+      "noRows": "没有数据。",
+      "showAll": "显示全部（{count}）",
+      "collapse": "收合",
+      "titles": {
+        "scorecard": "成绩单的数据依据",
+        "orders_vs_revenue": "订单与营收的数据依据",
+        "orders_vs_shipments": "订单与出货的数据依据",
+        "pipeline_vs_orders": "案源与订单的数据依据",
+        "won_vs_lost": "赢单与失单的数据依据",
+        "orders_vs_ontime": "准交率的数据依据"
+      },
+      "notes": {
+        "scorecard": "营收＝今年订单金额（USD）加总；毛利率＝1 −（品项成本 ÷ 品项金额），只算已回填成本的品项。目标取自年度计划。",
+        "orders_vs_revenue": "订单数与营收都依下单日分年；营收是订单金额（USD）加总。",
+        "orders_vs_shipments": "订单依下单日、出货单依出货日分年，各自计算张数。",
+        "pipeline_vs_orders": "上面是预计未来 6 个月内结案、还没赢也还没输的商机；下面是近 6 个月的订单。两边都是金额（USD）加总。",
+        "won_vs_lost": "预计结案日在期间内、已标为赢或输的商机，金额取预估金额（USD）。",
+        "orders_vs_ontime": "准时＝第一次出货日不晚于要求交期（一张订单有多个品项时，取最早的要求交期）。还没出货的订单算进订单数，不算进准交率。"
+      },
+      "sections": {
+        "orders": "订单",
+        "shipments": "出货单",
+        "revenue": "今年营收（订单）",
+        "margin": "毛利率（订单品项）",
+        "pipeline": "进行中的商机（预计 {start} ~ {end} 结案）",
+        "recentOrders": "近 6 个月订单（{start} ~ {end}）",
+        "opportunities": "已结案商机（{start} ~ {end}）",
+        "ontime": "逐笔订单"
+      },
+      "tiles": {
+        "orderCount": "{year} 订单数",
+        "revenue": "{year} 营收",
+        "shipmentCount": "{year} 出货单数",
+        "revenueTarget": "营收目标",
+        "achievement": "达成率",
+        "itemAmount": "品项金额",
+        "itemCost": "品项成本",
+        "margin": "毛利率",
+        "marginTarget": "毛利率目标",
+        "pipelineAmount": "商机金额合计",
+        "recentOrdersAmount": "订单金额合计",
+        "wonAmount": "赢得金额",
+        "lostAmount": "失去金额",
+        "lostShare": "失单占比",
+        "shippedCount": "{year} 已出货",
+        "ontimeCount": "{year} 准时",
+        "ontimeRate": "{year} 准交率"
+      },
+      "cols": {
+        "colOrderNo": "订单号",
+        "colOrderDate": "下单日",
+        "colAmount": "金额（USD）",
+        "colDeliveryNo": "出货单号",
+        "colShipDate": "出货日",
+        "colModel": "机种",
+        "colQty": "数量",
+        "colCost": "成本（USD）",
+        "colOpportunityId": "商机编号",
+        "colSubject": "主旨",
+        "colPhase": "阶段",
+        "colCloseDate": "预计结案",
+        "colReason": "原因",
+        "colRequestDate": "要求交期",
+        "colFirstShip": "首次出货",
+        "colResult": "结果"
+      },
+      "groups": {
+        "year": "{year}",
+        "won": "赢得",
+        "lost": "失去"
+      },
+      "status": {
+        "ontime": "准时",
+        "late": "迟交 {days} 天",
+        "unshipped": "未出货"
+      }
+    },
+    "modelQa": {
+      "back": "← 返回 {name} 品质",
+      "missingReport": "网址缺少 report 参数，无法加载机种明细——请从品质页签之机种清单进入。",
+      "loading": "加载中…",
+      "notFound": "找不到此机种在此期别之明细数据。",
+      "errorMessage": "读取失败：{message}",
+      "period": "期别 {period}",
+      "shipmentQty": "出货量",
+      "count": "笔数",
+      "rate": "比率",
+      "doa": "DOA",
+      "rma": "RMA",
+      "cfqr": "CFQR",
+      "fpy": "FPY",
+      "repair": "维修",
+      "fpyInput": "投入",
+      "noDataThisPeriod": "本期无数据",
+      "materialSectionTitle": "各料号出货",
+      "colMaterial": "料号",
+      "topRmaTitle": "RMA 原因排行",
+      "colReason": "原因",
+      "colCount": "笔数",
+      "topRepairDefectTitle": "维修不良排行",
+      "colDefectDesc": "不良描述",
+      "topRepairMaterialTitle": "维修料件排行",
+      "rmaDetailTitle": "RMA 明细",
+      "colRmaNo": "RMA 单号",
+      "colProductId": "产品料号",
+      "colReceiveDate": "收件日",
+      "colProblemDesc": "问题描述",
+      "colFailDesc": "故障描述",
+      "colTroubleCode": "故障代码",
+      "colReasonCode": "判定原因",
+      "colAnalysis": "分析说明",
+      "colDoaShort": "DOA",
+      "colWarranty": "保固内",
+      "yes": "是",
+      "no": "否",
+      "cfqrDetailTitle": "CFQR 明细",
+      "colCarNo": "CAR 单号",
+      "colIssueDate": "开单日",
+      "colDefectQty": "不良数",
+      "colStatus": "状态",
+      "fpyDetailTitle": "FPY 明细",
+      "colWorkOrder": "工单号码",
+      "colT1Input": "T1 投入",
+      "colT1Yield": "T1 良率",
+      "colT2Input": "T2 投入",
+      "colT2Yield": "T2 良率",
+      "colT3Input": "T3 投入",
+      "colT3Yield": "T3 良率",
+      "colFpyShort": "FPY",
+      "repairDetailTitle": "维修明细",
+      "colWip": "工单",
+      "colRepairDate": "维修日",
+      "colStation": "站别",
+      "colRepairType": "维修类别",
+      "colNgType": "不良分类",
+      "colRepairDesc": "维修描述",
+      "collapse": "收合",
+      "showAll": "显示全部（共 {count} 笔）"
+    },
+    "about": {
+      "title": "版本说明与架构简介",
+      "subtitle": "提供给初次用户——协助理解各卡片之含义及彼此之间的逻辑关联。",
+      "s1": {
+        "heading": "为什么采用一致的句型结构",
+        "p1": "此版本将「解读一家客户」的逻辑精简为单一查看句型：两条趋势分岔——比较两个指针，观察其相对变化速度。",
+        "p2": "学会一次即可套用于 12 家客户、每家 5 张卡片，无需记忆多套繁杂规则。",
+        "note": "卡片仅负责指出差异所在；如何解读，交给最熟悉该客户的业务与管理团队。"
+      },
+      "s2": {
+        "heading": "两个主要页签",
+        "quality": {
+          "title": "品质",
+          "desc": "五项指针（DOA、RMA、CFQR、FPY、维修率）与目标对照，灯号与门槛沿用正式系统规则。"
+        },
+        "sales": {
+          "title": "销售",
+          "desc": "呈现年度成绩单与五条因果线索。"
+        }
+      },
+      "s3": {
+        "heading": "五条线索具备严格因果链，顺序不容调换",
+        "intro": "五张卡片具备固定顺序，由源头推导至结果：",
+        "chain": {
+          "item0": {
+            "label": "年度成绩单",
+            "note": "实际 vs 目标——先看总结"
+          },
+          "item1": {
+            "label": "未来是否有案源进驻",
+            "note": "源头"
+          },
+          "item2": {
+            "label": "进驻的案源赢得多少",
+            "note": ""
+          },
+          "item3": {
+            "label": "赢得的订单结构为何",
+            "note": ""
+          },
+          "item4": {
+            "label": "能否顺利出货",
+            "note": ""
+          },
+          "item5": {
+            "label": "交货是否准时",
+            "note": "结果"
+          }
+        },
+        "quote": "订单减少是结果，商机才是源头。因此分析必须由源头着手，而非从结果倒推。"
+      },
+      "s4": {
+        "heading": "卡片标题仅呈现可量测之客观事实",
+        "p1": "标题不会主观断言客户或竞争对手的意图，亦不涉及未经量测之假设（如「客户在试水温」、「被竞品分食」属于主观推测，超出客观数据范围）。",
+        "p2": "卡片下方之「建议确认」为提问而非断言（例如「确认是否因年度降价谈妥」），不受此限。",
+        "p3": "成绩单未达标之情况一律统称为「与业务确认落差主因」：未达标因素繁多（交期、成本、产能、汇率等），系统仅能证实「是否达标」之客观事实。"
+      },
+      "s5": {
+        "heading": "相同的指针分岔，对不同类型客户意义相反",
+        "p1": "客户分为两种类型：ODM 项目型与标准品型（依近 12 个月 ODM 机种营收占比，门槛 30%）。",
+        "example": "例如：同样是「出货追上订单」——",
+        "exampleOdm": "对 ODM 客户代表「先前接获的项目正在大量出货」（正面信号）",
+        "exampleStd": "对标准品客户代表「正在消耗旧库存，新订单未补上」（需加强注意）",
+        "p2": "因此，阅读卡片前请先确认客户类型——销售页最上方将清楚标示。"
+      },
+      "s6": {
+        "heading": "线索支持进一步的交谈与追问",
+        "p1": "卡片提供初步结论，问答功能则补足卡片未详述的深度细节。",
+        "p2": "五条线索都有问答，各两题。具备问答的卡片会显示对应按钮。",
+        "p3": "答案由本地语言模型实时生成，基础材料仅限于「该线索本身计算出炉的事实」，每一句皆能对应至事实清单，不联结外部互联网。"
+      },
+      "s7": {
+        "heading": "真实数据与模拟数据之区隔",
+        "p1": "画面上所有客户、订单、商机、品质数值皆为模拟数据，并非真实客户信息。",
+        "p2": "品质指针之定义与灯号门槛皆沿用正式系统，未因展示（Demo）而放宽标准。",
+        "p3": "AI 文字由本地模型实时生成，点击「重新生成」可再次运行，每次措辞可能微调，但底层数值维持不变。",
+        "p4": "AI 摘要可切换中、英、日、韩四种语言；日文与韩文由中文版翻译而成，卡片上会标示「AI 翻译，仅供参考」。"
+      },
+      "s8": {
+        "heading": "首页：一眼看完 12 家 VIP",
+        "p1": "页眉的「AI 重点」以轮播呈现：第一张是跨客户的综合摘要，接着依序是 12 家 VIP 各自的品质与销售重点，每 30 秒换一张，也可以手动翻页。「重新生成」只重写第一张综合摘要。",
+        "p2": "下方图表右上角可切换两个视角：",
+        "quality": "品质风险分布——横轴 RMA、纵轴 DOA、泡泡大小为出货量，越往右上品质风险越高。",
+        "growth": "成长矩阵——横轴为营收占全公司比例，纵轴为成长率高于或低于全公司平均（百分点），泡泡大小为未来 6 个月加权案源金额。以占比 5% 与相对成长 0 分成「加码、维持、培养、查看」四个象限；本期新客户因无去年同期可比，不列入象限，标注于图下方。",
+        "p3": "从品质页签点击机种，可进一步查看该机种的 RMA、CFQR、FPY 与维修明细及排名。"
+      },
+      "tour": {
+        "heading": "导览路线：依时间长短选一套",
+        "intro": "以下三套介绍由浅入深，可依对方停留时间选用。",
+        "short": {
+          "title": "30 秒：快速认识",
+          "body": "这是协助业务主管掌握大客户状况的仪表板。页眉的 AI 重点每 30 秒换一家客户，用一两句话说明本期需要注意什么；下方图表一眼看出哪几家品质有风险，切换到成长矩阵则可看出哪几家值得加码。画面为模拟数据，品质门槛与正式系统相同。"
+        },
+        "mid": {
+          "title": "3 分钟：看一家客户",
+          "step1": "首页（约 1 分钟）：AI 重点轮播 → 品质风险分布（越往右上风险越高）→ 切换到成长矩阵，看右上角「★ 加码」的客户。",
+          "step2": "点进一家客户（约 1 分钟）：例如大和精机（加码象限、ODM 项目型）。品质页签看五项指针灯号，销售页签看年度成绩单。",
+          "step3": "收尾（约 30 秒）：每家客户都用同一套读法，学一次即可看懂 12 家；AI 摘要由本地模型生成，数据不离开公司。"
+        },
+        "long": {
+          "title": "10 分钟：深入了解",
+          "intro": "在 3 分钟版本之后，再加入以下四点：",
+          "step1": "五条线索是一条因果链：案源 → 赢单 → 订单结构 → 出货 → 准时交货。订单减少是结果，分析从源头的案源开始。",
+          "step2": "同一个信号对不同客户意义相反：「出货追上订单」对 ODM 客户是好消息，对标准品客户则需要留意；客户类型标示在销售页最上方。",
+          "step3": "现场追问：点击线索卡上的问答按钮，答案只根据该线索计算出的数字，不连外部网络。",
+          "step4": "多语与机种：将摘要切换为日文或韩文；从品质页签点进机种，查看 RMA 明细。"
+        },
+        "faq": {
+          "title": "常见问题",
+          "q1": "AI 会不会说出没有根据的内容？",
+          "a1": "卡片标题只写可量测的事实，不推测客户意图；「建议确认」是提问，不是结论。",
+          "q2": "数据是真的吗？",
+          "a2": "全部为模拟数据；指针定义与灯号门槛沿用正式系统。",
+          "q3": "成长矩阵的「培养」象限为什么是空的？",
+          "a3": "本期模拟数据中没有占比小且成长快的客户，门槛没有为了版面而调整。",
+          "q4": "重新生成每次结果都不同吗？",
+          "a4": "措辞可能不同，底层数字不变。"
+        }
+      }
+    },
+    "growthBubble": {
+      "empty": "尚无足够数据绘制成长矩阵",
+      "quadrant": {
+        "grow": "加码",
+        "maintain": "维持",
+        "nurture": "培养",
+        "review": "查看"
+      },
+      "legendNote": "横轴：占公司营收多少 · 纵轴：成长比公司整体快或慢多少（例如公司成长 10%、这家成长 25%，就画在 +15；0 以上代表跑赢公司） · 泡泡越大，未来 6 个月可能进来的案子越多 · 虚线为占比 5%",
+      "axisShare": "占公司营收 (%)",
+      "axisRelative": "比公司快／慢（百分点）",
+      "tooltipRevenue": "营收",
+      "tooltipShare": "占比",
+      "tooltipYoy": "YoY",
+      "tooltipRelative": "相对成长",
+      "tooltipPipeline": "未来 6 个月加权案源",
+      "tooltipMargin": "毛利率",
+      "newCustomerNote": "新客户，去年无营收、不列入象限"
+    }
+  }
+}

@@ -1,0 +1,185 @@
+
+@property --e-ai-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  --e-ink: #171a2c;
+  --e-muted: #5c6279;
+  --e-faint: #8a90a6;
+  --e-line: #e6e8ef;
+  --e-band: #f6f7fb;
+  --e-band-soft: #f9fafd;
+  --e-line-soft: #eef0f6;
+  --e-surface: #ffffff;
+  --e-brand: #4a1cb3;
+  --e-accent: #4b53c6;
+  --e-accent-soft: #eef0ff;
+  --e-ai-bg: #f5f2ff;
+  --e-ai-line: #e0d8fb;
+  --e-ai-ink: #5b45c9;
+  --e-ai-glow: #a594ff;
+  --e-t1: #f3f5fa;
+  --e-t2: #f1f6f5;
+  --e-t3: #f7f4ef;
+  --e-t4: #f0f4f9;
+  --e-t5: #f5f2f8;
+  --e-series-a: #2b2f4a;
+  --e-series-b: #7d87dc;
+  --e-good: var(--dir-pos);
+  --e-bad: var(--dir-neg);
+  --e-flat: #8a90a0;
+  --e-growth-ocean: #1e5aa8;
+  --e-growth-atmo: #7cc8ff;
+  --e-rank-rma: #6aa3f0;
+  --e-rank-doa: #1d3fbf;
+  --e-rank-repair: #4cc0d4;
+  --e-rank-fpy: #0585a3;
+  --e-rank-cfqr: #b5653a;
+  --e-radius: 16px;
+  --e-font: 'Manrope', 'Noto Sans TC', 'Microsoft JhengHei', var(--font-sans);
+  --e-font-text: 'Manrope', 'Noto Sans TC', 'Microsoft JhengHei', var(--font-sans);
+}
+
+.eli5-scope {
+  font-family: var(--e-font);
+  color: var(--e-ink);
+  background: var(--e-surface);
+}
+
+.eli5-scope .num {
+  font-variant-numeric: tabular-nums;
+}
+
+.eli5-overview {
+  background: transparent;
+}
+
+.eli5-band {
+  padding: 32px 40px;
+  background: var(--e-surface);
+}
+.eli5-band--tint {
+  background: var(--e-band-soft);
+}
+.eli5-band + .eli5-band {
+  border-top: 1px solid var(--e-line);
+}
+.eli5-overview .eli5-hero + .eli5-band {
+  border-top: 1px solid var(--e-line);
+}
+.eli5-overview .eli5-band + .eli5-band {
+  border-top-color: var(--e-line-soft);
+}
+@media (max-width: 760px) {
+  .eli5-band {
+    padding: 24px 18px;
+  }
+}
+
+.eli5-sec-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+.eli5-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--e-faint);
+}
+.eli5-h1 {
+  margin: 6px 0 4px;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.eli5-h2 {
+  margin: 4px 0 0;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.eli5-note {
+  font-size: 13px;
+  color: var(--e-muted);
+}
+.eli5-meta {
+  font-size: 13.5px;
+  color: var(--e-muted);
+}
+
+.eli5-pill {
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.eli5-pill--R {
+  color: var(--risk-r);
+  background: var(--risk-r-bg);
+}
+.eli5-pill--Y {
+  color: #a15c07;
+  background: var(--risk-y-bg);
+}
+.eli5-pill--G {
+  color: var(--risk-g);
+  background: var(--risk-g-bg);
+}
+.eli5-pill--accent {
+  color: var(--e-accent);
+  background: var(--e-accent-soft);
+}
+
+.eli5-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+}
+.eli5-dot--R {
+  background: var(--risk-r);
+}
+.eli5-dot--Y {
+  background: var(--risk-y);
+}
+.eli5-dot--G {
+  background: var(--risk-g);
+}
+
+.eli5-table-wrap {
+  overflow-x: auto;
+}
+.eli5-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+}
+.eli5-table th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--e-faint);
+  padding: 0 12px 10px;
+  border-bottom: 1px solid var(--e-line);
+  white-space: nowrap;
+}
+.eli5-table td {
+  padding: 13px 12px;
+  border-bottom: 1px solid var(--e-line);
+  white-space: nowrap;
+}
+.eli5-table .r {
+  text-align: right;
+}

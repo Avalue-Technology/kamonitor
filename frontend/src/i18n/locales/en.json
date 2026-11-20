@@ -1,0 +1,1124 @@
+{
+  "common": {
+    "noData": "No data",
+    "aiDisabled": "AI feature not connected",
+    "aiDisabledHint": "AI summaries are disabled in this version — see the ELI5 version instead",
+    "dataCutoff": "As of {date}",
+    "countUnit": "units",
+    "severityLabel": "Severity {severity}",
+    "severityLabelWithMax": "Severity {severity}/{max}",
+    "riskNormal": "Normal",
+    "riskAttention": "Attention",
+    "riskCritical": "Critical",
+    "riskUnknown": "No data"
+  },
+  "nav": {
+    "language": {
+      "zhLabel": "繁中",
+      "zhCnLabel": "简中",
+      "enLabel": "EN",
+      "ariaLabel": "Switch language"
+    },
+    "overview": "Overview",
+    "about": "About",
+    "mainNavAriaLabel": "Main navigation",
+    "searchPlaceholder": "Search VIP customer name / ID / country…"
+  },
+  "signalType": {
+    "growthQualityRisk": {
+      "label": "Growth with quality risk",
+      "description": "Revenue growth accompanied by quality risk: RMA/DOA is flagged for the same period and worse than three periods ago"
+    },
+    "repeatOrderBreak": {
+      "label": "Repeat order break",
+      "description": "A key model with a regular repeat-order pattern has stopped ordering, past 2x its own average cycle"
+    },
+    "silentKeyAccount": {
+      "label": "Key account with no new deals",
+      "description": "A top-revenue account with no new opportunities created in the last 180 days"
+    },
+    "serviceLoadImbalance": {
+      "label": "Service load imbalance",
+      "description": "AE tickets per USD million revenue are far above peer accounts"
+    },
+    "priceOnlyWins": {
+      "label": "Price-only wins",
+      "description": "Most deals won in the last two years were won on price alone, putting margin at risk"
+    },
+    "specGateLosses": {
+      "label": "Losing on spec gate",
+      "description": "Most deals lost in the last two years failed at the spec-match stage"
+    },
+    "pipelineDrought": {
+      "label": "Pipeline drought",
+      "description": "Weighted pipeline for the next 6 months falls short of the same historical period's revenue, or no new opportunities in the last two quarters"
+    },
+    "highEffortDeal": {
+      "label": "Major deal still open",
+      "description": "Deal value is significant and it has remained open for over six months — recommended for the leadership review list"
+    },
+    "staleOpenDeal": {
+      "label": "Stale open deal",
+      "description": "Opportunity has been open past the threshold days and isn't a \"major deal still open\" — worth confirming whether it's still active or should be closed (data hygiene)"
+    }
+  },
+  "signalCard": {
+    "severityImpact": "Impact score: {score}/100",
+    "impactTitle": "Calculated from affected revenue and how far it exceeds threshold; used for sorting only, not a measure of severity",
+    "expand": "Why? Show evidence",
+    "collapse": "Hide evidence",
+    "loadingEvidence": "Loading evidence…",
+    "loadError": "Failed to load evidence. Please try again later.",
+    "noEvidence": "No evidence available.",
+    "keyNumbers": "Key figures",
+    "thresholds": "Thresholds",
+    "assumptions": "Assumptions",
+    "rawDetailsSummary": "Technical details (raw evidence · signal_type: {type} · based on {count} facts)",
+    "formulaLabel": "Formula: {formula}"
+  },
+  "odmPipeline": {
+    "mpDateUnset": "MP date TBD",
+    "wonBadge": "Won · Not yet in MP",
+    "expectedMp": "Expected MP {quarter} ({date})",
+    "monthsToMp": "{months} months to MP",
+    "mpOverdue": "Past the planned MP date",
+    "mpCountdownUnknown": "MP countdown unknown",
+    "loading": "Loading ODM projects…",
+    "notFoundMessage": "ODM pipeline not available yet",
+    "notFoundHint": "ODM project data is currently unavailable. It will appear automatically once the connection is restored.",
+    "emptyMessage": "No ODM projects in development right now",
+    "nreBudgetLine": "NRE budget {budget}",
+    "nreSpentSuffix": "{pct}% spent",
+    "nrePending": "NRE spend data not available yet"
+  },
+  "aiNarrativeBlock": {
+    "emptyMessageDefault": "AI narrative not available yet",
+    "emptyHintDefault": "This section hasn't been generated yet — click the \"Regenerate\" button below to try again.",
+    "disclaimerDefault": "Generated automatically by AI from system data. For reference only — refer to this page's system metrics for the official reading.",
+    "loading": "Loading AI narrative…",
+    "loadErrorMessage": "Failed to load AI narrative",
+    "loadErrorHintFallback": "Please try again later or refresh the page.",
+    "modelCodeTitle": "Model code",
+    "citedValueTitle": "Based on: {label}",
+    "dataCutoffTitle": "The date these facts were calculated through"
+  },
+  "qualityQuadrant": {
+    "rmaYellowLabel": "RMA yellow {value}%",
+    "rmaRedLabel": "RMA red {value}%",
+    "doaYellowLabel": "DOA yellow {value}%",
+    "doaRedLabel": "DOA red {value}%",
+    "tooltipLine": "RMA Rate {rma}%  DOA Rate {doa}%",
+    "tooltipShipmentRisk": "Shipment {qty}  Signal {risk}",
+    "legendItem": "VIP accounts (size = shipment volume, color = quality signal)",
+    "legendHint": "Labels show only Attention/Critical accounts — hover a bubble for full detail, click to open the customer 360",
+    "thresholdNote": "Gray dashed lines mark the RMA/DOA quality thresholds (yellow/red cutoffs).",
+    "thresholdTitle": "Thresholds come from \"{name}\"'s active settings; most accounts don't override the default, so this applies broadly."
+  },
+  "portfolioYoyTrend": {
+    "streakLabel": "Consecutive decline months",
+    "monthsUnit": "months",
+    "methodHint": "Methodology ⓘ",
+    "methodHintTitle": "3MMA (3-Month Moving Aggregate) = rolling 3-month revenue total vs. the same 3 months last year. We don't use single-month YoY because a single month is swayed by seasonality and a few large orders, too noisy to show a trend direction; 3MMA smooths that out and reacts earlier than a trailing-12-month YoY. Basis: erp_sales_order order date, 8 VIP accounts combined. Consecutive decline months = counting back from the latest month, how many months YoY has stayed negative; a positive month or missing prior-year data breaks the streak.",
+    "chartCaption": "Monthly YoY trend (3MMA, %)",
+    "tooltipMonth": "{month} (rolling 3 months)",
+    "tooltipCurrent": "This period ${value}M",
+    "tooltipPrev": "Same period last year ${value}M",
+    "tooltipYoy": "YoY {value}",
+    "noPriorYear": "No prior-year data",
+    "yAxisName": "YoY %"
+  },
+  "regenerateButton": {
+    "labelDefault": "Regenerate",
+    "labelNotWired": "Regenerate (not yet available)",
+    "labelRunning": "Generating… {elapsed}s",
+    "labelDone": "Regenerated ({elapsed}s)",
+    "labelError": "Generation failed, try again",
+    "titleNotWired": "This feature isn't available yet — the button will activate automatically once it is.",
+    "titleDefault": "Regenerate this narrative"
+  },
+  "factCitationList": {
+    "summaryWithCited": "This summary is based on {total} facts, {cited} of which were actually cited",
+    "summaryTotalOnly": "This summary is based on {total} facts",
+    "collapsedToggle": "Based on {total} facts",
+    "citedSectionTitle": "Cited",
+    "uncitedSummary": "Not cited ({count}; not mentioned in this section but still part of the basis)",
+    "disclaimerZeroFacts": "No facts are recorded for this section (common for zero-signal control accounts) — this isn't missing data.",
+    "disclaimerAuthoritative": "Domain grouping and citation status are both recorded by the system, not inferred when the page is drawn.",
+    "disclaimerNoCitationData": "The system didn't provide a citation list for this section, so which facts were actually cited can't be shown — better to leave it unmarked than guess.",
+    "emptyMessage": "No supporting facts are recorded for this section."
+  },
+  "aiFacts": {
+    "domain": {
+      "sales": "Sales",
+      "quality": "Quality",
+      "opportunity": "Opportunity",
+      "service": "After-sales",
+      "odm": "ODM",
+      "signal": "Signal",
+      "portfolio": "Portfolio",
+      "other": "Other"
+    },
+    "domainUnclassified": "Unclassified ({domain})",
+    "domainUnclassifiedNone": "none"
+  },
+  "assistantFace": {
+    "phaseIdle": "AI assistant, idle",
+    "phaseReasoning": "AI assistant is thinking",
+    "phaseTooling": "AI assistant is looking up data",
+    "phaseSpeaking": "AI assistant is replying",
+    "phaseError": "AI assistant hit an error",
+    "phaseSleepy": "AI assistant is idle, about to sleep",
+    "phaseAsleep": "AI assistant is asleep",
+    "labelWithContext": "{phase}, context usage {percent}%"
+  },
+  "generationStamp": {
+    "aiTag": "AI-generated",
+    "localGenerated": "Generated locally",
+    "elapsed": "Took {value}",
+    "factCount": "Based on {count} facts",
+    "collapse": "Hide",
+    "expand": "Show",
+    "todayTime": "Today {time}"
+  },
+  "aeCaseTrend": {
+    "loading": "Loading AE ticket data…",
+    "notFoundMessage": "AE ticket data not yet available",
+    "notFoundHint": "This feature isn't available yet. The monthly stacked bar chart by category will appear automatically once data is ready.",
+    "emptyMessage": "No recent AE ticket data"
+  },
+  "dataStamp": {
+    "cutoffLoading": "Loading data cutoff date…",
+    "periodLabel": "Report period {period}"
+  },
+  "trendSparkline": {
+    "ariaLabel": "Trend chart",
+    "pointTitle": "{period}: {value}"
+  },
+  "riskDot": {
+    "titleWithDetail": "{label} — {detail}"
+  },
+  "period": {
+    "ttmWithRange": "Last 12 months ({range})",
+    "ttmDefault": "Last 12 months"
+  },
+  "api": {
+    "networkError": "Network error: {path}",
+    "responseError": "{path} responded {status}"
+  },
+  "overview": {
+    "title": "VIP Customer Overview",
+    "bandA": {
+      "heading": "Today's Focus",
+      "signalCountOnly": "{count} cross-domain signals this period",
+      "signalCountWithSeverity": "{count} cross-domain signals this period, highest severity {severity}",
+      "signalCountWithSeverityMax": "{count} cross-domain signals this period, highest severity {severity}/{max}",
+      "aiGenerated": "✦ AI-generated",
+      "aiScope": "Across all VIP customers · generated locally"
+    },
+    "bandB": {
+      "heading": "Company-wide YoY Trend",
+      "sub": "8 VIP accounts combined · rolling 3-month YoY (3MMA)",
+      "loading": "Loading company-wide trend…",
+      "loadError": "Failed to load portfolio data",
+      "loadErrorHint": "Please try again later or refresh the page.",
+      "ttmSuffix": "({count} VIP accounts combined)",
+      "yoyLabel": "Revenue YoY (same period last year: {prev})",
+      "pipelineLabel": "Expected pipeline value (opportunities created, not yet ordered)",
+      "chartLoadError": "Company-wide YoY trend is temporarily unavailable",
+      "chartLoadErrorHint": "Please try again later or refresh the page.",
+      "leadPanelTitle": "Leading warnings · speaks 6 months ahead of revenue, not a forecast",
+      "leadLoading": "Loading leading warnings…",
+      "leadEmpty": "No leading warnings detected this period",
+      "coverageTitle": "Low pipeline coverage for the next 6 months",
+      "coverageBody": "Only {pipeline} in the pipeline, vs {baseline} in the same period last year",
+      "coverageMetaTitle": "Expected close value over the next 6 months ÷ revenue in the same 6 months last year. The numerator is weighted by stage-close probability (Feasibility 20% / Proposal 40% / Sampling 60% / Closing 90%, all assumed). 3x is an industry rule of thumb, not derived from this dataset; revenue in this business comes mostly from repeat orders on existing models, which don't open new opportunities — so coverage below 1x is structurally normal, not a warning sign.",
+      "coverageMetaText": "{ratio}x · this business runs mostly on repeat orders, typically under 1x (industry reference: 3x)",
+      "coverageAssumptionSuffix": " · includes assumptions",
+      "declineTitle": "{streak} consecutive months below last year's revenue",
+      "declineBody": "Last 3 months' revenue {recent}, vs {prev} same period last year ({yoy})",
+      "declineMetaTitle": "Consecutive months (counting back from the latest) where the 3-month rolling YoY is negative; same formula as the company-wide line above — this picks the longest streak among the 8 accounts.",
+      "declineAsOf": "As of {month}",
+      "compactEmpty": "No other cross-domain signals pending review",
+      "compactMore": "{count} more lower-severity signals",
+      "footnote": "{count} account-instances triggered"
+    },
+    "bandC": {
+      "heading": "Quality Risk Quadrant",
+      "tag": "Quality view",
+      "tagTitle": "This chart covers quality only (RMA × DOA × shipment volume) — it excludes revenue, YoY, and other sales metrics, and doesn't represent overall account health.",
+      "sub": "RMA / DOA / shipment volume only, excludes sales · X: RMA Rate  Y: DOA Rate  bubble size: shipment volume (period {period})",
+      "loading": "Loading quadrant chart…",
+      "empty": "No customer data available to plot the quadrant this period",
+      "aeTitle": "AE Ticket Density",
+      "aeSub": "After-sales tickets per USD million revenue · {ttm} · {count} VIP accounts",
+      "aeLoading": "Loading AE ticket density…",
+      "aeEmpty": "No AE ticket density data yet",
+      "aeMedianLabel": "Median {value}",
+      "aeDotTitle": "{name}: {density} tickets/USD million",
+      "aeNoteAllNormal": "All {count} VIP accounts sit near the median of {median} tickets/USD million — no abnormal density this period",
+      "aeNoteRiskyDetailItem": "{name} is {multiple}x the median ({ticketCount} tickets ÷ {revenue})",
+      "aeNoteWithRisky": "Most accounts cluster near the median; {detail}",
+      "aeNoteJoinSeparator": "; "
+    },
+    "bandD": {
+      "heading": "ODM Pipeline",
+      "sub": "ODM projects launched this year → expected mass-production quarter"
+    },
+    "bandE": {
+      "heading": "VIP Customer List ({count})",
+      "subExpanded": "Click a customer name to view full performance data and risk indicators",
+      "subCollapsed": "{count} accounts currently flagged · click to expand",
+      "filterCustomerModelAll": "Customer Model: All",
+      "filterIndustryAll": "Industry: All",
+      "filterCountryAll": "Country: All",
+      "sortNote": "Sorted by signal severity (descending) by default",
+      "loading": "Loading customer list…",
+      "loadError": "Failed to load customer list",
+      "columnName": "Customer",
+      "columnTtmRevenue": "TTM Revenue",
+      "columnYoy": "Revenue YoY",
+      "columnSegment": "Customer Model / Industry",
+      "columnSignals": "Signals",
+      "modelAlertCount": "{count} models flagged",
+      "signalTypeSeparator": ", "
+    }
+  },
+  "customer": {
+    "loading": "Loading customer data…",
+    "notFound": "Customer not found",
+    "notFoundHint": "The ID may have been reassigned. Go back to Overview and select again.",
+    "loadError": "Failed to load customer data",
+    "loadErrorHint": "Please try again later or refresh the page.",
+    "header": {
+      "cooperationYears": "{years} yr partnership",
+      "cooperationUnknown": "Partnership length unknown",
+      "salesOwnerLabel": "Sales owner: ",
+      "unitParen": " ({unit})",
+      "vipReasonLabel": " · VIP reason: ",
+      "statTtmRevenue": "TTM Revenue",
+      "statYoyLabel": "YoY (same period last year {prev})",
+      "statWonRateLabel": "Won rate (last 2 years, {won}/{closed})",
+      "newOppLabel": "New opportunities (last 6mo)",
+      "newOppPrevSuffix": " (prior 6mo: {prev})",
+      "noteExpand": "Show background (LLM-generated)",
+      "noteCollapse": "Hide background"
+    },
+    "crossDomain": {
+      "heading": "AI Cross-Domain Summary",
+      "emptyMessage": "AI cross-domain summary not yet generated",
+      "emptyHint": "No cross-domain summary has been generated for this customer yet."
+    },
+    "signals": {
+      "heading": "This Customer's Signals",
+      "loading": "Loading signals…",
+      "loadError": "Failed to load signals",
+      "loadErrorHint": "Please try again later or refresh the page.",
+      "noSignalTitle": "This customer has been fully assessed and all indicators are currently normal — no risk alerts have been triggered.",
+      "noSignalText": "No signals",
+      "moreSignals": "{count} more lower-priority signals",
+      "qualityAlertTitle": "Quality KPI flags",
+      "qualityAlertChipTitle": "Click to view the Quality tab",
+      "modelAlertChipTitle": "Click to view the model risk table on the Quality tab",
+      "modelChipLabel": "Model {model} · {label}",
+      "riskWordYellow": "Yellow",
+      "riskWordRed": "Red",
+      "remainingModelAlerts": "{count} more models also have flagged KPIs"
+    },
+    "regenerate": {
+      "genericFailure": "Regeneration failed"
+    },
+    "tabs": {
+      "sales": "Sales",
+      "quality": "Quality",
+      "salesRiskDetail": "A deal has gone stale beyond the reasonable wait window — see \"Deal Health\" on the Sales tab"
+    },
+    "sales": {
+      "summaryEmptyMessage": "AI sales summary not yet generated",
+      "summaryEmptyHint": "This feature will be available in a future release.",
+      "closedDealsEmpty": "Not enough closed-deal data in the last 2 years"
+    },
+    "dealHealth": {
+      "heading": "Deal Health",
+      "pipelineLabel": "Pipeline & Amount",
+      "countAmount": "{count} deals · {amount}",
+      "amountFillGapTitle": "{count} deals are missing an amount — the total above is likely an underestimate",
+      "amountFillGapTag": "Only {filled}/{total} deals have an amount filled in",
+      "majorProjectsLabel": "Major Projects",
+      "majorProjectsCount": "{count} · {amount}",
+      "noMajorProjects": "No major projects on file",
+      "majorProjectSubject": "{label} ({status} · {cycle})",
+      "staleNoUpdate": "No progress logged yet (threshold {days} days)",
+      "staleUpdated": "Stale · {days} days (threshold {threshold} days)",
+      "ongoingLabel": "Ongoing Deals",
+      "advancingLabel": "Advancing",
+      "dealCountAmount": "{count} deals {amount}",
+      "longRunningLabel": "Long sales cycle",
+      "noLongRunning": "No long-running deals",
+      "daysOpen": "{days} days",
+      "moreItems": "{count} more",
+      "unclassifiedLabel": "Unclassified"
+    },
+    "usage": {
+      "heading": "Usage Analysis",
+      "sub": "Broken down by opportunity Usage; Unknown means the order/opportunity has no Usage filled in — it's not a business category",
+      "unknownLabel": "{usage} (uncategorized)",
+      "revenueTitle": "Last 12 Months' Revenue (by Usage, USD basis)",
+      "revenueSub": "Last-12-months order basis · YoY vs. same period last year",
+      "unknownSharePctTag": "Unknown: {pct}%",
+      "revenueEmpty": "Not enough order data in the last 12 months to break down by Usage",
+      "wonRateTitle": "Won Rate by Usage (deal-count basis)",
+      "wonRateSub": "Closed deals in the last 2 years; x-axis fixed at 0–100% to compare win rates across usages",
+      "wonRateCountTag": "Parentheses show closed-deal count",
+      "wonRateNoClosed": "No closed deals in the last 2 years",
+      "wonRateFraction": "Win rate {pct} ({won}/{closed})",
+      "noDataShort": "No data"
+    },
+    "gate": {
+      "heading": "Win vs. Loss Factors",
+      "sub": "Dimensions follow the sales conversation order: Spec → Lead Time → Price — losing at an earlier gate is more severe"
+    },
+    "odm": {
+      "heading": "ODM Pipeline",
+      "wonTag": "Won",
+      "expectedMp": "Expected MP: {date}",
+      "monthsToMp": " ({months} mo away)",
+      "nreBudget": "NRE budget {amount}",
+      "nreSpent": "· {pct}% spent",
+      "inProductionTag": "In production",
+      "roiMultiple": "Cumulative revenue ÷ NRE = {multiple}x",
+      "paybackTitle": "Payback period is derived from an assumed gross margin, not a measured one",
+      "payback": "Payback {months} mo ({status}) · assumed gross margin {pct}%",
+      "recovered": "Recovered",
+      "notRecovered": "Not yet recovered",
+      "paybackUnavailable": "Payback period not yet estimable (NRE data not ready)",
+      "nreUnavailable": "NRE data not ready yet — ROI multiple can't be calculated",
+      "notFound": "ODM pipeline data not yet available",
+      "notFoundHint": "ODM project data is currently unavailable — this will appear automatically once it's ready."
+    },
+    "revenue": {
+      "trendTitleMonthly": "Revenue Trend (last 18 months, 3-month rolling sum)",
+      "trendTitleQuarterly": "Revenue Trend (last 12 quarters, stacked by model)",
+      "trendEmpty": "Not enough order data yet to chart the revenue trend",
+      "modelRankTitle": "Model Revenue Ranking (last 12 months; [ODM] = development-project models)",
+      "modelRankEmpty": "No model revenue data yet",
+      "chartYAxisName": "3-month rolling revenue (USD)",
+      "series3mLabel": "Last 3-month sum"
+    },
+    "projects": {
+      "heading": "Project Detail",
+      "colModel": "Model",
+      "colTtmRevenue": "Last 12 Months Revenue",
+      "colYoy": "Model Revenue YoY",
+      "colSharePct": "Share",
+      "colLastShip": "Last Shipment"
+    },
+    "quality": {
+      "tabRiskBothLabel": "Account-level quality KPIs are flagged, and {count} more models are flagged yellow/red — see the Quality tab",
+      "tabRiskAggregateOnly": "Account-level quality KPIs are flagged yellow/red — see the Quality tab",
+      "tabRiskModelOnly": "All 5 account-level KPIs are green, but {count} models are flagged yellow/red (the aggregate dilutes individual-model issues) — see the model risk table on the Quality tab",
+      "summaryEmptyMessage": "AI quality summary not yet generated",
+      "summaryEmptyHint": "This feature will be available in a future release.",
+      "topRiskTitleHint": "Ranking logic: the 5 KPI flags are weighted (Red = 2, Yellow = 1, Green = 0) and summed, top 3 shown — the same rule used in the AI summary's \"models to watch\" section, consistent across the app.",
+      "topRiskWordTitle": "This model's worst flag across the 5 KPIs: {word}",
+      "topRiskAllGreen": "All models are green on every indicator this period — nothing to call out",
+      "topRiskNoData": "No model quality data yet",
+      "noReport": "No QA report on file for this customer yet",
+      "thresholdDetail": "Yellow {yellow} / Red {red}",
+      "trendHeading": "Quality KPI Trend",
+      "trendPeriodTitle": "Period = the last month of the rolling window, e.g. 202607 means the sum/average over the 12-month window 2025/08–2026/07, not a single month's figure (derived from the same period field as the \"last 12 months\" KPI cards above — same definition).",
+      "trendPeriodSub": "Last 6 periods · each of the 5 KPIs has its own y-axis (different scales)",
+      "trendThreshold": "Target: {value}",
+      "trendCountValue": "{count}",
+      "trendChartEmpty": "Not enough periods yet to chart the trend",
+      "colModel": "Model",
+      "colShipmentQty": "Shipment Qty",
+      "colComplaints": "Complaints"
+    },
+    "afterSales": {
+      "heading": "After-Sales",
+      "sub": "Last 6 months · AE tickets",
+      "chartTitle": "Monthly AE Ticket Trend by Category",
+      "chartSub": "Stacked by month; color blocks are ticket categories"
+    }
+  },
+  "evidence": {
+    "label": {
+      "doa": "DOA metric",
+      "rma": "RMA metric",
+      "cur_rate": "Current period value",
+      "compare_rate": "Comparison period value",
+      "cur_risk": "Current period signal",
+      "yellow_threshold": "Yellow threshold",
+      "red_threshold": "Red threshold",
+      "triggered": "Triggered",
+      "yoy_pct": "Revenue YoY",
+      "yoy_ratio": "YoY ratio (vs 10% baseline)",
+      "yoy_trigger_pct": "YoY trigger threshold",
+      "impact_score": "Impact score",
+      "impact": "Impact calculation details",
+      "latest_period": "Latest period",
+      "compare_period": "Comparison period",
+      "erp_customer_id": "Customer ID",
+      "ttm_revenue_usd": "Last 12 months revenue",
+      "prev_revenue_usd": "Prior year revenue",
+      "affected_revenue_usd": "Affected revenue",
+      "portfolio_ttm_revenue_usd": "VIP portfolio last 12 months revenue",
+      "revenue_weight_pct": "Revenue weight",
+      "worst_metric_ratio": "Worst metric ratio",
+      "severity_multiplier": "Severity multiplier",
+      "lookback_periods": "Lookback periods",
+      "latest_report_id": "Latest report ID",
+      "compare_report_id": "Comparison report ID",
+      "model": "Model",
+      "gap_days": "Days since last order",
+      "rma_count": "RMA count",
+      "cfqr_count": "CFQR count",
+      "order_count": "Historical order count",
+      "avg_cycle_days": "Avg repeat order cycle (days)",
+      "last_order_date": "Last order date",
+      "revenue_rank_3yr": "3-year revenue rank",
+      "revenue_share_pct_3yr": "3-year revenue share %",
+      "revenue_share_pct": "3-year revenue share %",
+      "multiple_of_avg_cycle": "Multiple of avg cycle",
+      "multiple": "Multiple of avg cycle",
+      "gap_trigger_multiple": "Gap trigger threshold",
+      "model_revenue_3yr_usd": "Model 3-year revenue",
+      "model_revenue_annualized_usd": "Model annualized revenue",
+      "min_gap_days": "Min days threshold",
+      "min_order_points": "Min historical orders",
+      "min_revenue_share_pct": "Min revenue share % threshold",
+      "recent_order_dates": "Recent order dates",
+      "other_candidates": "Other opportunities in same account",
+      "days_since_last_new_opportunity": "Days since last new opportunity",
+      "days_trigger_threshold": "Days trigger threshold",
+      "revenue_rank_among_vip": "Revenue rank among VIPs",
+      "reference_date": "Reference date",
+      "since": "Statistical start date",
+      "won_total": "Won opportunities",
+      "price_only_wins": "Price-only wins",
+      "price_only_wins_pct": "Price-only win ratio",
+      "pct_trigger_threshold": "Ratio threshold",
+      "opportunity_ids": "Related opportunity IDs",
+      "spec_gate_losses": "Spec-gate losses",
+      "spec_gate_losses_pct": "Spec-gate loss ratio",
+      "lost_stopped_total": "Lost or Stopped opportunities",
+      "rank": "Rank",
+      "coverage_multiple": "Pipeline coverage multiple",
+      "stage_probability_is_assumption": "Stage win probability is assumed",
+      "healthy_multiple_is_assumption": "Pipeline health multiple is assumed",
+      "recent_quarter": "Most recent full quarter",
+      "recent_new_opportunity_count": "New opportunities this quarter",
+      "recent_new_opportunity_amount_usd": "New opportunity value this quarter",
+      "baseline_quarters": "Baseline quarters (prior 3 quarters)",
+      "baseline_avg_count_per_quarter": "Avg new opportunities per quarter (baseline)",
+      "baseline_total_count": "Total new opportunities (baseline)",
+      "baseline_avg_amount_usd_per_quarter": "Avg new opportunity value per quarter (baseline)",
+      "own_history_density_ratio": "Pipeline density vs own history",
+      "own_history_trigger_ratio": "Own history density threshold",
+      "peer_median_density_ratio": "Median ratio vs 8 VIPs",
+      "peer_median_trigger_fraction": "Median trigger fraction",
+      "peer_trigger_value": "Peer threshold (median × fraction)",
+      "peer_sample_size": "Valid peer sample size",
+      "all_vip_own_history_density_ratios": "VIP customer pipeline density ratios vs historical own",
+      "reference": "Reference value",
+      "weighted_pipeline_6m_usd": "Weighted pipeline value next 6 months USD",
+      "coverage_baseline_revenue_usd": "Coverage baseline revenue last year same period",
+      "coverage_healthy_multiple_assumed": "Pipeline coverage healthy multiple industry benchmark",
+      "opportunity_id": "Opportunity ID",
+      "product": "Product",
+      "subject": "Opportunity subject",
+      "display_label": "Opportunity",
+      "sales_cycle": "Sales cycle type",
+      "sales_cycle_phase": "Sales phase",
+      "start_date": "Opportunity start date",
+      "days_open": "Days open",
+      "same_type_avg_cycle_days": "Same type avg sales cycle days",
+      "same_type_sample_count": "Same type sample count",
+      "multiple_of_same_type_avg": "Multiple of same type avg",
+      "amount_usd": "Opportunity value USD",
+      "amount_is_approximate": "Value is approximate",
+      "significant_amount_threshold_usd": "Significant amount threshold USD",
+      "min_days_open_threshold": "Minimum days open threshold",
+      "max_age_days_threshold": "Max age days threshold standard",
+      "max_age_days_threshold_large": "Max age days threshold large",
+      "large_amount_multiple": "Large amount multiple threshold",
+      "stale_count": "Stale opportunity count",
+      "oldest_days_open": "Oldest open days",
+      "oldest_opportunity_id": "Oldest opportunity ID",
+      "oldest_display_label": "Oldest opportunity",
+      "applicable_max_age_days": "Applicable max age days",
+      "items": "Opportunity list",
+      "category": "Signal category",
+      "threshold": "Trigger threshold",
+      "ratio_ticket_per_musd": "AE tickets per $1M revenue",
+      "vip_median_ratio": "VIP median (tickets per $1M)",
+      "ticket_count_ttm": "AE tickets last 12 months",
+      "all_vip_ratios": "AE tickets per $1M by VIP",
+      "trigger_threshold": "Trigger threshold",
+      "thresholds": "Trigger thresholds"
+    },
+    "layout": {
+      "growthQualityRisk": {
+        "rmaCurRate": "RMA Rate (current period)",
+        "doaCurRate": "DOA Rate (current period)",
+        "yoyTriggerThreshold": "YoY trigger threshold",
+        "rmaYellowThreshold": "RMA yellow threshold",
+        "doaYellowThreshold": "DOA yellow threshold"
+      },
+      "repeatOrderBreak": {
+        "modelRevenueSharePct3yr": "This model's 3-year revenue share",
+        "gapDays": "Days since last order",
+        "avgCycleDays": "Own average repeat cycle",
+        "multipleOfAvgCycle": "Multiple of average cycle",
+        "minRevenueSharePctThreshold": "Minimum revenue share threshold",
+        "minOrderPointsThreshold": "Minimum historical order count",
+        "minGapDaysThreshold": "Minimum days threshold",
+        "gapTriggerMultipleThreshold": "Cycle multiple trigger threshold"
+      },
+      "serviceLoadImbalance": {
+        "ratioTicketPerMusd": "AE tickets per USD million revenue",
+        "vipMedianRatio": "VIP median",
+        "ticketCountTtm": "AE tickets, last 12 months",
+        "triggerThreshold": "Trigger threshold"
+      },
+      "silentKeyAccount": {
+        "revenueRankAmongVip": "Revenue rank among VIPs",
+        "daysSinceLastNewOpportunity": "Days since last new opportunity",
+        "silentDaysTriggerThreshold": "Silent-days trigger threshold"
+      },
+      "priceOnlyWins": {
+        "wonTotal": "Won opportunities, last 2 years",
+        "priceOnlyWinsCount": "Price-only wins",
+        "priceOnlyWinsPctThreshold": "Price-only win ratio trigger threshold"
+      },
+      "specGateLosses": {
+        "lostStoppedTotal": "Lost/Stopped opportunities, last 2 years",
+        "specGateLossesCount": "Spec-gate losses",
+        "specGateLossesPctThreshold": "Spec-gate loss ratio trigger threshold"
+      },
+      "highEffortDeal": {
+        "amountUsd": "Opportunity value",
+        "daysOpen": "Days open",
+        "sameTypeAvgCycleDays": "Same-type average sales cycle (reference only, not a trigger)",
+        "multipleOfSameTypeAvg": "Multiple of same-type average (reference only, not a trigger)",
+        "significantAmountThreshold": "Significant amount threshold",
+        "minDaysOpenThreshold": "Minimum days-open threshold"
+      },
+      "staleOpenDeal": {
+        "staleCount": "Opportunities past threshold",
+        "oldestDaysOpen": "Oldest days open",
+        "oldestDisplayLabel": "Oldest opportunity",
+        "maxAgeDaysThresholdStandard": "Days threshold (standard deals)",
+        "maxAgeDaysThresholdLarge": "Days threshold (large deals)"
+      }
+    },
+    "unit": {
+      "deals": "{n} deals",
+      "tickets": "{n} tickets",
+      "ticketsPerMusd": "{n} tickets/USD million",
+      "times": "{n} times",
+      "days": "{n} days",
+      "rank": "No. {n}",
+      "approxUsd": "≈{amount}"
+    },
+    "value": {
+      "yes": "Yes",
+      "no": "No",
+      "empty": "None",
+      "countItems": "{n} items"
+    },
+    "section": {
+      "facts": "Facts"
+    },
+    "assumption": {
+      "stageProbability": "The win probability assigned to each deal stage (Feasibility 20% / Proposal 40% / Sampling 60% / Close 90%) is a user-set assumption, not derived from historical win rates.",
+      "healthyMultiple": "The \"3x pipeline coverage\" benchmark is an industry rule of thumb, not derived from this dataset; revenue in this business comes mostly from repeat orders on existing models, which don't open new opportunities, so a coverage ratio below 1x is structurally normal.",
+      "significantAmountPercentile": "The \"significant amount\" threshold is the 75th percentile (P75) of open opportunity values company-wide (among those with an amount filled in); the 75% cutoff is a design choice for this revision, not a statistically derived significance level.",
+      "timeConfidence": "The \"weighted pipeline for the next 6 months\" applies a month-by-month confidence weight (95% for month 1 down to 40% for month 6 — nearer months weighted higher), which is an assumed value, not derived from historical accuracy statistics.",
+      "fallbackWithLabel": "{label} is an assumed value, not a fact computed by the system.",
+      "fallbackGeneric": "This figure is an assumed value, not a fact computed by the system."
+    }
+  },
+  "eli5": {
+    "overview": {
+      "loading": "Loading…",
+      "notFoundMessage": "Overview data isn't available yet",
+      "notFoundHint": "Backend endpoint /eli5/qa/overview isn't wired up yet — check back later.",
+      "errorMessage": "Failed to load",
+      "redCount": "{count} account in the red | {count} accounts in the red",
+      "byCustomerEyebrow": "By account",
+      "qaCardsTitle": "Quality cards",
+      "qaCardsNote": "Arrows compare to the prior period; click a card to open that account",
+      "growthEyebrow": "Revenue size × growth pace",
+      "growthTitle": "Growth matrix",
+      "growthCompanyYoy": "Company-wide growth {pct}%",
+      "tabsLabel": "Quality chart views",
+      "tabQuadrant": "Quadrant",
+      "tabMatrix": "Model matrix",
+      "tabRanking": "Risk ranking",
+      "modelMatrix": {
+        "thCustomer": "Customer",
+        "noShared": "No model is shared by two or more customers this period",
+        "legendZero": "0 units",
+        "legendGreen": "Green",
+        "legendYellow": "Yellow",
+        "legendRed": "Red",
+        "legendFew": "Too few units",
+        "legendNone": "Not purchased",
+        "note": "Columns are shared models, cells show the RMA rate; click a cell to open the customer",
+        "tipShip": "Shipped {qty}",
+        "tipRma": "RMA {pct} ({count} cases)",
+        "tipFew": "Shipments below {min}; the RMA rate is indicative only",
+        "tipNoRma": "No RMA data"
+      },
+      "riskRanking": {
+        "filterLabel": "Customer",
+        "filterAll": "All ({n})",
+        "legendNote": "Axis fixed at {axis}, cap {cap} per metric",
+        "groupPost": "After shipment",
+        "groupFactory": "In factory",
+        "empty": "No metric exceeds its threshold this period",
+        "emptyCustomer": "No metric exceeds its threshold for this customer this period",
+        "fewTitle": "Too few units, indicative only",
+        "fewNote": "Includes metrics with too small a sample; scores are indicative only",
+        "showAll": "Show all {n}",
+        "showTop": "Show top {n} only",
+        "odm": "ODM",
+        "tipSeg": "{key} {score}"
+      },
+      "qualityHead": {
+        "quadrant": {
+          "eyebrow": "RMA × DOA",
+          "title": "Quality risk distribution"
+        },
+        "matrix": {
+          "eyebrow": "Shared models × customers",
+          "title": "Model matrix",
+          "note": "Cells show RMA rate"
+        },
+        "ranking": {
+          "eyebrow": "How far past threshold",
+          "title": "Risk ranking"
+        }
+      }
+    },
+    "chartReading": {
+      "label": "AI reading"
+    },
+    "hero": {
+      "title": "VIP Accounts Overview",
+      "pill": "DEMO DATA",
+      "meta": "Period {period} · latest period per account · {count} VIP accounts",
+      "aiEyebrow": "AI Highlights",
+      "loading": "Loading…",
+      "errorMessage": "Failed to load",
+      "emptyMessage": "AI summary not generated yet",
+      "emptyHint": "This will summarize what to watch this period in a few sentences",
+      "customerEmptyMessage": "No AI summary for this account yet",
+      "regenErrorDefault": "Generation failed — please try again",
+      "langMenuLabel": "Summary language",
+      "prevSlide": "Previous",
+      "nextSlide": "Next",
+      "qualityLabel": "Quality",
+      "salesLabel": "Sales"
+    },
+    "aiCard": {
+      "ariaLabel": "AI summary",
+      "eyebrowDefault": "AI Highlights",
+      "loading": "Loading…",
+      "errorMessage": "Failed to load",
+      "emptyMessageDefault": "AI summary not generated yet",
+      "emptyHintDefault": "This will summarize the key points of this page in a few sentences",
+      "regenErrorDefault": "Generation failed — please try again",
+      "langMenuLabel": "Summary language",
+      "langNameEn": "English",
+      "langNameZhTW": "Chinese",
+      "summaryLangFallbackNote": "{requested} version not ready yet — showing {actual} version"
+    },
+    "clueDialog": {
+      "closeLabel": "Close",
+      "dialogLabel": "Ask AI",
+      "placeholder": "Pick a question",
+      "answerEyebrow": "AI answer",
+      "loading": "Loading…",
+      "notFoundMessage": "Not generated yet",
+      "notFoundHint": "Click the button below to generate an answer for this question",
+      "errorMessage": "Failed to load",
+      "regenErrorDefault": "Generation failed — please try again"
+    },
+    "gapCard": {
+      "evidenceLink": "See the orders →",
+      "stepQuestion": {
+        "pipeline_vs_orders": "Is anything coming in?",
+        "won_vs_lost": "How much of it do we win?",
+        "orders_vs_revenue": "What do the orders look like?",
+        "orders_vs_shipments": "Can we ship it?",
+        "orders_vs_ontime": "Are we on time?"
+      },
+      "clueButtonTitle": "What does this mean for this account?",
+      "clueButtonAriaLabel": "Ask AI about this card",
+      "actionLabel": "Suggested check",
+      "aiNoteLabel": "AI note",
+      "aiNoteEmpty": "Not generated yet",
+      "emptyData": "Not enough data",
+      "axisOntime": "On-time rate →",
+      "axisOrders": "Order count",
+      "bridge": {
+        "base": "Last year",
+        "orders": "Order count",
+        "aov": "Avg. order size",
+        "revenue": "Revenue this year"
+      }
+    },
+    "qaTab": {
+      "loading": "Loading…",
+      "notFoundMessage": "Quality view data isn't available yet",
+      "notFoundHint": "Backend endpoint /eli5/qa/customers/{id} isn't wired up yet — check back later.",
+      "errorMessage": "Failed to load",
+      "periodNote": "Period {period} · metrics are trailing 12 months, trend shown for the last 6 months",
+      "kpiEyebrow": "Quality metrics",
+      "kpiTitle": "Five metrics against target",
+      "kpiNote": "Red dashed line = target; dot color = that month's status",
+      "top3Eyebrow": "Look at these first",
+      "top3Title": "Top 3 highest-risk models",
+      "top3Note": "2 points for red, 1 for yellow, summed across all five metrics",
+      "top3Empty": "No models flagged this period",
+      "shipmentQty": "{count} units shipped",
+      "scoreLabel": "Risk score",
+      "detailEyebrow": "Detail",
+      "detailTitle": "All models",
+      "detailNote": "{count} models · {qty} units shipped",
+      "colModel": "Model",
+      "colShipmentQty": "Shipment count",
+      "colDoa": "DOA",
+      "colRma": "RMA",
+      "colCfqr": "CFQR",
+      "colFpy": "FPY",
+      "colRepairRate": "Repair rate",
+      "emptyModelsRow": "No model data this period"
+    },
+    "salesTab": {
+      "loading": "Loading…",
+      "notFoundMessage": "ELI5 data isn't available yet",
+      "notFoundHint": "Backend endpoint /customers/{id}/eli5 isn't wired up yet — check back later.",
+      "errorMessage": "Failed to load",
+      "metaLine": "{type} · ODM {pct}% of revenue · trailing 12 months {start} – {end}",
+      "scorecardEyebrow": "This year's scorecard",
+      "scorecardNote": "Targets were set at the start of the year; this only reports results, not causes",
+      "scorecardEvidenceLink": "See the orders →",
+      "chainsEyebrow": "Visible clues",
+      "chainsTitle": "Five clues, in causal order",
+      "chainsNote": ""
+    },
+    "customerPage": {
+      "tabQuality": "Quality",
+      "tabSales": "Sales",
+      "noteToggle": "Background"
+    },
+    "qaBubble": {
+      "empty": "Not enough data to draw the bubble chart",
+      "legendRisk": "At risk",
+      "legendAttention": "Watch",
+      "legendNormal": "Normal",
+      "legendNote": "RMA/DOA are rolling 12 months · Status takes the worse of RMA and DOA · bubble size = shipment volume · hover a bubble to see the account name",
+      "axisRma": "RMA rate (%)",
+      "axisDoa": "DOA rate (%)",
+      "tooltipShipment": "Shipment count",
+      "tooltipUnit": "units"
+    },
+    "kpiTile": {
+      "risk": {
+        "R": "Over target",
+        "Y": "Watch",
+        "G": "On target"
+      },
+      "flatDelta": "Flat",
+      "unitPiece": "units",
+      "target": "Target",
+      "deltaSub": "vs. last month"
+    },
+    "evidence": {
+      "back": "← Back to {name} sales",
+      "loading": "Loading…",
+      "notFound": "No data for this card.",
+      "errorMessage": "Failed to load: {message}",
+      "noRows": "No data.",
+      "showAll": "Show all ({count})",
+      "collapse": "Collapse",
+      "titles": {
+        "scorecard": "Scorecard: source data",
+        "orders_vs_revenue": "Orders and revenue: source data",
+        "orders_vs_shipments": "Orders and shipments: source data",
+        "pipeline_vs_orders": "Pipeline and orders: source data",
+        "won_vs_lost": "Won and lost deals: source data",
+        "orders_vs_ontime": "On-time rate: source data"
+      },
+      "notes": {
+        "scorecard": "Revenue = sum of this year's order amounts (USD). Gross margin = 1 − (item cost ÷ item amount), counting only items with a recorded cost. Targets come from the annual plan.",
+        "orders_vs_revenue": "Orders and revenue are split by year using the order date; revenue is the sum of order amounts (USD).",
+        "orders_vs_shipments": "Orders are split by order date and shipments by ship date; each side is a count.",
+        "pipeline_vs_orders": "Top: open opportunities expected to close within the next 6 months. Bottom: orders from the last 6 months. Both are USD totals.",
+        "won_vs_lost": "Opportunities marked won or lost with an expected close date in the period; amounts are expected amounts (USD).",
+        "orders_vs_ontime": "On time = first shipment no later than the requested date (for multi-item orders, the earliest requested date). Unshipped orders count toward orders, not toward the on-time rate."
+      },
+      "sections": {
+        "orders": "Orders",
+        "shipments": "Shipments",
+        "revenue": "This year's revenue (orders)",
+        "margin": "Gross margin (order items)",
+        "pipeline": "Open opportunities (closing {start} – {end})",
+        "recentOrders": "Orders in the last 6 months ({start} – {end})",
+        "opportunities": "Closed opportunities ({start} – {end})",
+        "ontime": "Orders"
+      },
+      "tiles": {
+        "orderCount": "{year} orders",
+        "revenue": "{year} revenue",
+        "shipmentCount": "{year} shipments",
+        "revenueTarget": "Revenue target",
+        "achievement": "Achievement",
+        "itemAmount": "Item amount",
+        "itemCost": "Item cost",
+        "margin": "Gross margin",
+        "marginTarget": "Margin target",
+        "pipelineAmount": "Pipeline total",
+        "recentOrdersAmount": "Orders total",
+        "wonAmount": "Won amount",
+        "lostAmount": "Lost amount",
+        "lostShare": "Lost share",
+        "shippedCount": "{year} shipped",
+        "ontimeCount": "{year} on time",
+        "ontimeRate": "{year} on-time rate"
+      },
+      "cols": {
+        "colOrderNo": "Order no.",
+        "colOrderDate": "Order date",
+        "colAmount": "Amount (USD)",
+        "colDeliveryNo": "Delivery no.",
+        "colShipDate": "Ship date",
+        "colModel": "Model",
+        "colQty": "Qty",
+        "colCost": "Cost (USD)",
+        "colOpportunityId": "Opportunity",
+        "colSubject": "Subject",
+        "colPhase": "Phase",
+        "colCloseDate": "Expected close",
+        "colReason": "Reason",
+        "colRequestDate": "Requested",
+        "colFirstShip": "First shipped",
+        "colResult": "Result"
+      },
+      "groups": {
+        "year": "{year}",
+        "won": "Won",
+        "lost": "Lost"
+      },
+      "status": {
+        "ontime": "On time",
+        "late": "{days} days late",
+        "unshipped": "Not shipped"
+      }
+    },
+    "modelQa": {
+      "back": "← Back to {name} quality",
+      "missingReport": "Missing report parameter in the URL — open this page from a model row in the quality tab.",
+      "loading": "Loading…",
+      "notFound": "No detail data for this model in this period.",
+      "errorMessage": "Failed to load: {message}",
+      "period": "Period {period}",
+      "shipmentQty": "Shipment count",
+      "count": "Count",
+      "rate": "Rate",
+      "doa": "DOA",
+      "rma": "RMA",
+      "cfqr": "CFQR",
+      "fpy": "FPY",
+      "repair": "Repair",
+      "fpyInput": "Input",
+      "noDataThisPeriod": "No data this period",
+      "materialSectionTitle": "Shipments by material",
+      "colMaterial": "Material",
+      "topRmaTitle": "Top RMA reasons",
+      "colReason": "Reason",
+      "colCount": "Count",
+      "topRepairDefectTitle": "Top repair defects",
+      "colDefectDesc": "Defect description",
+      "topRepairMaterialTitle": "Top repair materials",
+      "rmaDetailTitle": "RMA detail",
+      "colRmaNo": "RMA no.",
+      "colProductId": "Product ID",
+      "colReceiveDate": "Receive date",
+      "colProblemDesc": "Problem description",
+      "colFailDesc": "Failure description",
+      "colTroubleCode": "Trouble code",
+      "colReasonCode": "Reason code",
+      "colAnalysis": "Analysis",
+      "colDoaShort": "DOA",
+      "colWarranty": "In warranty",
+      "yes": "Yes",
+      "no": "No",
+      "cfqrDetailTitle": "CFQR detail",
+      "colCarNo": "CAR no.",
+      "colIssueDate": "Issue date",
+      "colDefectQty": "Defect qty",
+      "colStatus": "Status",
+      "fpyDetailTitle": "FPY detail",
+      "colWorkOrder": "Work order",
+      "colT1Input": "T1 input",
+      "colT1Yield": "T1 yield",
+      "colT2Input": "T2 input",
+      "colT2Yield": "T2 yield",
+      "colT3Input": "T3 input",
+      "colT3Yield": "T3 yield",
+      "colFpyShort": "FPY",
+      "repairDetailTitle": "Repair detail",
+      "colWip": "WO",
+      "colRepairDate": "Repair date",
+      "colStation": "Station",
+      "colRepairType": "Repair type",
+      "colNgType": "Defect category",
+      "colRepairDesc": "Repair description",
+      "collapse": "Collapse",
+      "showAll": "Show all ({count})"
+    },
+    "about": {
+      "title": "What this version does",
+      "subtitle": "For anyone seeing this screen for the first time — what each card is saying, and how they connect.",
+      "s1": {
+        "heading": "Why one sentence pattern",
+        "p1": "This version boils \"understanding a customer\" down to one sentence pattern: two lines diverging — comparing two metrics to see which one is moving faster.",
+        "p2": "Learn it once, and it applies across all 12 customers and 5 cards each — no separate rulebook to memorize for each one.",
+        "note": "A card only points out where something is different; how to read it is left to whoever knows the customer best."
+      },
+      "s2": {
+        "heading": "Two tabs",
+        "quality": {
+          "title": "Quality",
+          "desc": "Five metrics (DOA, RMA, CFQR, FPY, repair rate) against target. Status colors and thresholds follow the production system's rules."
+        },
+        "sales": {
+          "title": "Sales",
+          "desc": "This year's scorecard, plus five clues."
+        }
+      },
+      "s3": {
+        "heading": "The five clues form a causal chain — the order is fixed",
+        "intro": "These five cards run in a fixed order, from source to result:",
+        "chain": {
+          "item0": {
+            "label": "This year's scorecard",
+            "note": "Actual vs target — start here"
+          },
+          "item1": {
+            "label": "Is anything coming in?",
+            "note": "Source"
+          },
+          "item2": {
+            "label": "How much of it do we win?",
+            "note": ""
+          },
+          "item3": {
+            "label": "What do the orders look like?",
+            "note": ""
+          },
+          "item4": {
+            "label": "Can we ship it?",
+            "note": ""
+          },
+          "item5": {
+            "label": "Are we on time?",
+            "note": "Outcome"
+          }
+        },
+        "quote": "Fewer orders is the outcome; pipeline is the source. So these five cards start from the source, not the outcome."
+      },
+      "s4": {
+        "heading": "Card titles state only what's measured",
+        "p1": "Titles never assert customer or competitor intent, and never claim something we don't actually measure. \"The customer is testing the waters\" or \"a competitor is eating share\" are guesses, not things the data can prove — that inference is left to the viewer.",
+        "p2": "The \"So what?\" line under each card is a question, not a claim (e.g. \"check whether the annual price negotiation ate the margin\") — it isn't bound by this rule.",
+        "p3": "All three cases where the scorecard misses target are written the same way: \"confirm the main gap with sales.\" There are too many possible reasons a target is missed (lead time, cost, capacity, FX...) — the data can only prove whether the target was hit, not why."
+      },
+      "s5": {
+        "heading": "The same divergence means the opposite thing for different customers",
+        "p1": "Customers fall into two types: ODM Project accounts and Standard Product accounts (by ODM-model revenue share over the trailing 12 months, threshold 30%).",
+        "example": "For example, take \"shipments catching up with orders\":",
+        "exampleOdm": "for an ODM Project customer, it means a previously-won project is now shipping in volume (good news)",
+        "exampleStd": "for a Standard Product customer, it means old orders are being worked down with no new orders replacing them (worth watching)",
+        "p2": "So before reading a card, check which type this customer is — it's flagged at the top of the Sales tab."
+      },
+      "s6": {
+        "heading": "Clues can be questioned further",
+        "p1": "The card gives a conclusion; the Q&A fills in what the card doesn't say.",
+        "p2": "All five clues have Q&A, two questions each. The button appears on cards that have Q&A.",
+        "p3": "Answers are generated by a local language model, using only the facts this clue itself computed — every sentence must trace back to that fact list. Nothing leaves the local network."
+      },
+      "s7": {
+        "heading": "What's real and what's simulated",
+        "p1": "Every customer, order, deal, and quality number on screen is simulated data — none of it is a real customer.",
+        "p2": "Quality metric definitions and status thresholds follow the production system exactly; nothing was relaxed for the demo.",
+        "p3": "AI text is generated live by the local model. Pressing \"Regenerate\" runs it again — wording changes each time, but the underlying numbers don't.",
+        "p4": "AI summaries can be switched between Chinese, English, Japanese and Korean. Japanese and Korean are translated from the Chinese version, and the card is labeled \"AI-translated, for reference only\"."
+      },
+      "s8": {
+        "heading": "Home: all 12 VIP customers at a glance",
+        "p1": "The \"AI Highlights\" strip at the top is a carousel: the first slide is a cross-customer overview, followed by the quality and sales highlights of each of the 12 VIP customers. It advances every 30 seconds and can also be paged manually. \"Regenerate\" rewrites only the first, overview slide.",
+        "p2": "The top-right corner of the chart below switches between two views:",
+        "quality": "Quality risk distribution — RMA on the x-axis, DOA on the y-axis, bubble size is shipment volume. The further to the upper right, the higher the quality risk.",
+        "growth": "Growth matrix — the x-axis is the customer's share of company revenue; the y-axis is growth above or below the company average (percentage points); bubble size is the weighted pipeline value for the next 6 months. A 5% share and 0 relative growth divide the chart into four quadrants: Grow, Maintain, Nurture and Review. New customers this period have no prior-year comparison, so they are left out of the quadrants and noted below the chart.",
+        "p3": "From the Quality tab, select a model to see its RMA, CFQR, FPY, repair details and ranking."
+      },
+      "tour": {
+        "heading": "Tour routes: pick one by available time",
+        "intro": "The three walkthroughs below go from brief to in-depth. Choose one based on how much time the audience has.",
+        "short": {
+          "title": "30 seconds: the quick overview",
+          "body": "This is a dashboard that helps sales managers keep track of their key accounts. The AI highlights at the top move to a new customer every 30 seconds, with a sentence or two on what needs attention this period. The chart below shows at a glance which customers carry quality risk, and switching to the growth matrix shows which ones merit more investment. The data on screen is simulated; quality thresholds are the same as the production system."
+        },
+        "mid": {
+          "title": "3 minutes: look at one customer",
+          "step1": "Home (about 1 minute): the AI highlights carousel → the quality risk distribution (the further upper right, the higher the risk) → switch to the growth matrix and look at the customers marked \"★ Grow\" in the upper right.",
+          "step2": "Open one customer (about 1 minute): for example 大和精機工業株式会社 (Grow quadrant, ODM Project type). The Quality tab shows the status lights for five metrics; the Sales tab shows the annual scorecard.",
+          "step3": "Wrap-up (about 30 seconds): every customer is read the same way, so learning it once covers all 12. AI summaries are generated by a local model, and no data leaves the company."
+        },
+        "long": {
+          "title": "10 minutes: in depth",
+          "intro": "After the 3-minute version, add the following four points:",
+          "step1": "The five clues form a causal chain: pipeline → wins → order mix → shipments → on-time delivery. Fewer orders is the outcome, so the analysis starts from the source, the pipeline.",
+          "step2": "The same signal means the opposite for different customers: \"shipments catching up with orders\" is good news for an ODM customer but needs attention for a Standard Product customer. The customer type is shown at the top of the Sales tab.",
+          "step3": "Live follow-up questions: click the Q&A button on a clue card. Answers are based only on the numbers computed for that clue and never reach the external internet.",
+          "step4": "Languages and models: switch the summary to Japanese or Korean; from the Quality tab, open a model to see its RMA details."
+        },
+        "faq": {
+          "title": "FAQ",
+          "q1": "Can the AI say things that have no basis?",
+          "a1": "Card titles state only measurable facts and do not speculate about customer intent. \"Suggested follow-up\" is a question, not a conclusion.",
+          "q2": "Is the data real?",
+          "a2": "All of it is simulated. Metric definitions and status thresholds follow the production system.",
+          "q3": "Why is the \"Nurture\" quadrant of the growth matrix empty?",
+          "a3": "In this period's simulated data, no customer has a small share with fast growth. The thresholds were not adjusted to fill the layout.",
+          "q4": "Does Regenerate give a different result every time?",
+          "a4": "The wording may differ; the underlying numbers do not change."
+        }
+      }
+    },
+    "growthBubble": {
+      "empty": "Not enough data to draw the growth matrix",
+      "quadrant": {
+        "grow": "Grow",
+        "maintain": "Maintain",
+        "nurture": "Nurture",
+        "review": "Review"
+      },
+      "legendNote": "Across: share of company revenue · Up: how much faster or slower than the company as a whole (e.g. company +10%, this account +25% → plotted at +15; above 0 means beating the company) · bigger bubble = more likely deals in the next 6 months · dashed line = 5% share",
+      "axisShare": "Share of company revenue (%)",
+      "axisRelative": "Faster / slower than company (pts)",
+      "tooltipRevenue": "Revenue",
+      "tooltipShare": "Share",
+      "tooltipYoy": "YoY",
+      "tooltipRelative": "Relative growth",
+      "tooltipPipeline": "Weighted pipeline (6mo)",
+      "tooltipMargin": "Gross margin",
+      "newCustomerNote": "New customers, no revenue last year — excluded from quadrants"
+    }
+  }
+}

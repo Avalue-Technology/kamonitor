@@ -1,0 +1,34 @@
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: kamonitor-root
+      MYSQL_DATABASE: kamonitor
+      MYSQL_USER: kamonitor
+      MYSQL_PASSWORD: kamonitor
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    volumes:
+      # The demo data (kamonitor_demo.sql.gz) is imported on the first start only.
+      - ./db:/docker-entrypoint-initdb.d:ro
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-ukamonitor", "-pkamonitor"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+
+  app:
+    build: .
+    environment:
+      MYSQL_CRM_HOST: db
+      MYSQL_CRM_DATABASE: kamonitor
+      MYSQL_CRM_USERNAME: kamonitor
+      MYSQL_CRM_PASSWORD: kamonitor
+    ports:
+      - "8111:8111"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  db-data:
