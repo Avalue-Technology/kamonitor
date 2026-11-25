@@ -15,7 +15,7 @@ KAMonitor 是一套 VIP 客戶經營儀表板的展示版：把銷售成長與�
 - **Traceable AI text** — every number in the AI text comes from a fact list computed with SQL and rules; the model only rewrites the facts into sentences.
 - English, Traditional Chinese and Simplified Chinese UI. Simplified Chinese is converted from Traditional Chinese with [OpenCC](https://github.com/BYVoid/OpenCC) at runtime.
 
-The AI text is pre-generated and shipped with the demo data, so no LLM is needed to run the demo. The "regenerate" buttons are therefore hidden.
+The AI text is pre-generated and shipped with the demo data, so no LLM is needed to run the demo. Connect an LLM (see below) to turn on the "Regenerate" buttons and generate the summaries yourself.
 
 ## Quick start (Docker)
 
@@ -32,11 +32,28 @@ Requires Docker with Compose v2.
 
 The first start imports the demo data into MySQL, which takes about a minute. To reset the data, run `docker compose down -v` and start again.
 
+## Regenerating AI summaries (optional)
+
+The "Regenerate" buttons appear when the app is connected to an OpenAI-compatible chat completions endpoint, such as a local [vLLM](https://github.com/vllm-project/vllm) server. Create a `.env` file next to `docker-compose.yml`:
+
+```bash
+# A server on the same machine as Docker: use host.docker.internal instead of localhost
+LLM_API_BASE=http://host.docker.internal:8000/v1
+LLM_MODEL=<the model name your server reports at /v1/models>
+```
+
+Then run `docker compose up -d` again. Regenerating writes the new text into the database; `docker compose down -v` restores the original demo data.
+
+The prompts and the checks that validate each answer were tuned with Qwen models. Other models may need more retries or fail the checks; the page then keeps the previous text and shows the error.
+
+The generation code is in `datagen/` (`narrate_ai*.py` for summaries, `narrate_clue_qa.py` for clue Q&A, `translate_narratives.py` for translations).
+
 ## Project layout
 
 ```
 backend/    FastAPI API (read-only), also serves the built frontend
 frontend/   Vue 3 + Vite + ECharts
+datagen/    AI summary generation (prompts, fact lists, answer checks)
 db/         put the demo data dump here
 ```
 

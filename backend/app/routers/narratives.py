@@ -1,5 +1,6 @@
 import logging
 import os
+import sys
 import subprocess
 import threading
 import time
@@ -40,7 +41,7 @@ def _lock_for(key):
             _locks[key] = lock
         return lock
 
-_VENV_PYTHON = os.path.join(config._ROOT, ".venv", "bin", "python")
+_VENV_PYTHON = sys.executable
 _NARRATE_SCRIPT = os.path.join(config._ROOT, "datagen", "narrate_ai.py")
 _SUBPROCESS_TIMEOUT_S = 420
 

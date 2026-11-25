@@ -24,6 +24,13 @@ services:
       MYSQL_CRM_DATABASE: kamonitor
       MYSQL_CRM_USERNAME: kamonitor
       MYSQL_CRM_PASSWORD: kamonitor
+      # Optional: an OpenAI-compatible LLM endpoint enables the "Regenerate" buttons.
+      # Set these in a .env file next to this compose file (see README).
+      LLM_API_BASE: ${LLM_API_BASE:-}
+      LLM_MODEL: ${LLM_MODEL:-}
+    extra_hosts:
+      # lets LLM_API_BASE point to a server on the Docker host: http://host.docker.internal:8000/v1
+      - "host.docker.internal:host-gateway"
     ports:
       - "8111:8111"
     depends_on:

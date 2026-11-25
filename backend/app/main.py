@@ -22,9 +22,10 @@ app.add_middleware(
 
 app.include_router(customers.router)
 app.include_router(reports.router)
-narratives.router.routes = [
-    r for r in narratives.router.routes if not getattr(r, "path", "").endswith("/regenerate")
-]
+if not (os.environ.get("LLM_API_BASE") and os.environ.get("LLM_MODEL")):
+    narratives.router.routes = [
+        r for r in narratives.router.routes if not getattr(r, "path", "").endswith("/regenerate")
+    ]
 app.include_router(narratives.router)
 app.include_router(eli5.router)
 app.include_router(eli5.qa_router)

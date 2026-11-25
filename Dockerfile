@@ -12,6 +12,7 @@ WORKDIR /app
 COPY backend/requirements.txt backend/requirements.txt
 RUN pip install --no-cache-dir -r backend/requirements.txt
 COPY backend/ backend/
+COPY datagen/ datagen/
 COPY --from=frontend /app/frontend/dist frontend/dist
 EXPOSE 8111
 CMD ["uvicorn", "app.main:app", "--app-dir", "backend", "--host", "0.0.0.0", "--port", "8111"]
